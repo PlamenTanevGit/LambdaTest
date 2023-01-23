@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[chromeoption is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : firstName_pap]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : lastName_bgt]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : email_tbs@email.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : +359123123123]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : passean]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : passean]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : company_ixr]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address1_fku]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address2_bsl]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : Sofia]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1111]]>
+    </line>
+    <line>
+      <![CDATA[Driver quit]]>
+    </line>
+    <line>
+      <![CDATA[Duration of Suite is : 10 sec.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-01-23T17:11:42 EET" name="Default suite" finished-at="2023-01-23T17:11:53 EET" duration-ms="10742">
+    <groups>
+    </groups>
+    <test started-at="2023-01-23T17:11:42 EET" name="Default test" finished-at="2023-01-23T17:11:53 EET" duration-ms="10742">
+      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCart">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ShoppingTests.LAMBDA_TESTS_ShoppingCart@1aa7ecca]" started-at="2023-01-23T17:11:42 EET" name="beforeSuite" finished-at="2023-01-23T17:11:42 EET" duration-ms="6" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.LAMBDA_TESTS_ShoppingCart@1aa7ecca]" started-at="2023-01-23T17:11:42 EET" name="beforeClass" finished-at="2023-01-23T17:11:43 EET" duration-ms="928" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chromeoption is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="t3_CheckoutItem(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ShoppingTests.LAMBDA_TESTS_ShoppingCart@1aa7ecca]" started-at="2023-01-23T17:11:43 EET" name="t3_CheckoutItem" description="This test performs search product and verifies the found product" data-provider="productInputs" finished-at="2023-01-23T17:11:53 EET" duration-ms="9776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firstName_pap]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lastName_bgt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[email_tbs@email.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+359123123123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[passean]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[company_ixr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[address1_fku]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[address2_bsl]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Sofia]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1111]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Bulgaria]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Sofia]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : firstName_pap]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : lastName_bgt]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : email_tbs@email.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : +359123123123]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : passean]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : passean]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : company_ixr]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address1_fku]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address2_bsl]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : Sofia]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1111]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t3_CheckoutItem -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.LAMBDA_TESTS_ShoppingCart@1aa7ecca]" started-at="2023-01-23T17:11:53 EET" name="afterClass" finished-at="2023-01-23T17:11:53 EET" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:ShoppingTests.LAMBDA_TESTS_ShoppingCart@1aa7ecca]" started-at="2023-01-23T17:11:53 EET" name="afterSuite" finished-at="2023-01-23T17:11:53 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Driver quit]]>
+            </line>
+            <line>
+              <![CDATA[Duration of Suite is : 10 sec.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- ShoppingTests.LAMBDA_TESTS_ShoppingCart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
