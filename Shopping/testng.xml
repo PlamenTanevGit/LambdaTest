@@ -12,13 +12,17 @@
     <classes>
       <class name="ShoppingTests.LAMBDA_TESTS_HomePage"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  
   
-  <test thread-count="5" name="SHOPPING CART TESTS">
+  
+  
+   <test thread-count="5" name="SHOPPING CART TESTS">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCart"/>
+      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+  <!--  -->
+ 
   
   
 </suite> <!-- Suite -->

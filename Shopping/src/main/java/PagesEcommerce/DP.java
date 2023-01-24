@@ -33,7 +33,8 @@ public class DP {
 		}
 		
 		else if (m.getName().equals("t3_CheckoutItem")) {
-			return new Object[][] { { 
+			return new Object[][] { 
+				{ 
 				"firstName_"+base.randomString(3),
 				"lastName_"+base.randomString(3),
 				"email_"+base.randomString(3)+"@email.com", 
@@ -45,7 +46,25 @@ public class DP {
 				"Sofia",
 				"1111",
 				"Bulgaria",
-				"Sofia"},
+				"Sofia",
+				"VAT_NO"
+				},
+				
+				{ 
+				"firstName_"+base.randomString(3),
+				"lastName_"+base.randomString(3),
+				"email_"+base.randomString(3)+"@email.com", 
+				"+359123123123",
+				"pass"+base.randomString(3),
+				"company_"+base.randomString(3),
+				"address1_"+base.randomString(3),
+				"address2_"+base.randomString(3),
+				"Tirol",
+				"9999",
+				"Austria",
+				"Tirol",
+				"VAT_NO"
+				},
 
 			};
 		}

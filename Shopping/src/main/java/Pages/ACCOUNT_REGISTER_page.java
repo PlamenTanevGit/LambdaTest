@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class Lambdatest_CHECKOUT_ACCOUNT_REGISTER extends base {
+public class ACCOUNT_REGISTER_page extends base {
 
 	public String firstName;
 	public String lastName;
@@ -26,6 +26,7 @@ public class Lambdatest_CHECKOUT_ACCOUNT_REGISTER extends base {
 	public String postCode;
 	public String country;
 	public String region;
+	public String VAT;
 
 	public WebElement Checkout_topLeftIcon() {
 		return element = super.findElement("xpath", "//li[@class='breadcrumb-item active']");
@@ -122,6 +123,16 @@ public class Lambdatest_CHECKOUT_ACCOUNT_REGISTER extends base {
 	
 	public WebElement ContinueButton() {
 		return element = super.findElement("xpath", "//button[@id='button-save']");
+
+	}
+	
+	public WebElement AccountLogout_message() {
+		return element = super.findElement("xpath", "//div[@id='content']/h1");
+
+	}
+	
+	public WebElement AccountLogout_Continue_button() {
+		return element = super.findElement("xpath", "//div[@class='buttons mb-4']/a");
 
 	}
 	
@@ -352,11 +363,87 @@ public class Lambdatest_CHECKOUT_ACCOUNT_REGISTER extends base {
 		return searchedOption;
 
 	}
+	
+	
+	/***
+	 *  Product Right Side Elements 
+	 */
+	public WebElement SubTotal_value() {
+		return element = super.findElement("xpath", "//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/strong[1]");
 
+	}
+	
+	public WebElement FlatShipping_value() {
+		return element = super.findElement("xpath", "//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/strong[1]");
 
-	public Lambdatest_CHECKOUT_ACCOUNT_REGISTER() {
+	}
+	
+	public WebElement EcoTax_value() {
+		return element = super.findElement("xpath", "//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[3]/td[2]/strong[1]");
+
+	}
+	public WebElement VAT_value() {
+		return element = super.findElement("xpath", "//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[4]/td[2]/strong[1]");
+
+	}
+	
+	public WebElement Total_value (String VAT) {
 		
-		confirmOrderPage = new Lambdatest_CONFIRM_ORDER_PAGE();
+		switch (VAT) {
+		
+		case "VAT_YES":
+			element = super.findElement("xpath",
+					"//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[5]/td[2]/strong[1]");
+			break;
+
+		case "VAT_NO":
+			element = super.findElement("xpath",
+					"//body//div[2]/div[1]/div[1]/table[1]/tbody[1]/tr[3]/td[2]/strong[1]");
+			break;
+
+		default:
+			break;
+		}
+
+		return element;
+	}
+	
+	/***
+	 *  Values
+	 */
+	public double  getSubTotalAmount () {
+		return  getDoubleFromStringAmount(SubTotal_value().getText());								
+	}
+	
+	public double  getFlatShippingRateAmmount () {
+		return  getDoubleFromStringAmount(FlatShipping_value().getText());								
+	}
+	
+	public double  getEcoTaxAmount () {
+		return  getDoubleFromStringAmount(EcoTax_value().getText());								
+	}
+	
+	public double  getVATAmount () {
+		return  getDoubleFromStringAmount(VAT_value().getText());								
+	}
+	
+	public double  getTotalAmount (String VAT) {
+		return  getDoubleFromStringAmount(Total_value(VAT).getText());								
+	}
+
+	
+	
+	public static double getDoubleFromStringAmount (String stringUpd) {
+		double priceDouble= 0;
+		String price1 = stringUpd.replace("$", "");
+		priceDouble= Double.parseDouble(price1);
+		return priceDouble;
+	}
+	
+	
+	public ACCOUNT_REGISTER_page() {
+		
+		confirmOrderPage = new CONFIRM_ORDER_PAGE();
 
 	}
 

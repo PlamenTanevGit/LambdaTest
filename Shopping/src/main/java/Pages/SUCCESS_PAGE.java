@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class Lambdatest_CHECKOUT_PAGE extends base {
+public class SUCCESS_PAGE extends base {
 
 	public WebElement Checkout_topLeftIcon() {
 		return element = super.findElement("xpath",
@@ -15,7 +15,7 @@ public class Lambdatest_CHECKOUT_PAGE extends base {
 	}
 
 	
-	public Lambdatest_CHECKOUT_PAGE() {
+	public SUCCESS_PAGE() {
 		
 	}
 

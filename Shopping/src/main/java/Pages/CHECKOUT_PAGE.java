@@ -7,15 +7,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class Lambdatest_CONFIRM_ORDER_PAGE extends base {
+public class CHECKOUT_PAGE extends base {
 
-	public WebElement ConfirmOrder_title() {
+	public WebElement Checkout_topLeftIcon() {
 		return element = super.findElement("xpath",
-				"//h1[normalize-space()='Confirm Order']");
+				"//li[@class='breadcrumb-item active']");
 	}
 
 	
-	public Lambdatest_CONFIRM_ORDER_PAGE() {
+	public CHECKOUT_PAGE() {
 		
 	}
 

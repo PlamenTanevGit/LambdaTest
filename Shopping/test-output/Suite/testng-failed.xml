@@ -12,8 +12,10 @@
       <class name="ShoppingTests.LAMBDA_TESTS_HomePage">
         <methods>
           <include name="afterSuite"/>
+          <include name="t2_SearchField_verifyAutoSuggestResults"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
+          <include name="t3_search_ProductInTheSearchFieldAndVerifyResults"/>
           <include name="beforeClass"/>
           <include name="t1_verifyLambdaTest_HomePageElements"/>
         </methods>

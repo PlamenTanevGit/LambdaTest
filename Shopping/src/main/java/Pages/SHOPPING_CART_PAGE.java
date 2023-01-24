@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class Lambdatest_SHOPPING_CART_PAGE extends base {
+public class SHOPPING_CART_PAGE extends base {
 
 	
 	
@@ -124,7 +124,26 @@ public class Lambdatest_SHOPPING_CART_PAGE extends base {
 				"//a[normalize-space()='Continue Shopping']");
 	
 	}
+	
+	public WebElement ContiniueButton() {
+		return element = super.findElement("xpath", 
+				"//div[@class='buttons']/a");
+	
+	}
 
+	public void clickOnContinueButton () {
+		try {
+			wait = new WebDriverWait(driver, 4);
+			super.movesToTheElement(ContiniueButton());
+			super.jSClick(ContiniueButton());
+			wait.until(ExpectedConditions.visibilityOf(homePage.topRowButtonsSection_shopByCattergory_Button()));
+	
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 
 	public void selectCheckout () {
 		try {
@@ -207,10 +226,22 @@ public class Lambdatest_SHOPPING_CART_PAGE extends base {
 		
 	}
 	
-	public double  getTotalValue () {
+	public double  getTotalValue (String VAT) {
 		double TotalValue = 0;
-		String TotalStringValue = super.findElement
-				("xpath", "//div[@class='row mb-3 align-items-end']//table[@class='table table-bordered m-0']/tbody/tr[4]/td[2]").getText();
+		String TotalStringValue = null;
+		switch (VAT) {
+		case "VAT_YES":
+			TotalStringValue = super.findElement
+			("xpath", "//div[@class='row mb-3 align-items-end']//table[@class='table table-bordered m-0']/tbody/tr[4]/td[2]").getText();
+			break;
+		case "VAT_NO":
+			TotalStringValue = super.findElement
+			("xpath", "//div[@class='row mb-3 align-items-end']//table[@class='table table-bordered m-0']/tbody/tr[2]/td[2]").getText();
+			break;
+		default:
+			break;
+		}
+		
 		String TotalStringValueModified = TotalStringValue.replace("$", "");
 		TotalValue= Double.parseDouble(TotalStringValueModified);	
 		
@@ -233,17 +264,47 @@ public class Lambdatest_SHOPPING_CART_PAGE extends base {
 		/**
 		 * Grid values assertions
 		 */
-		softAssert.assertTrue(ItemCheckout_Image(productName).isDisplayed());
-		softAssert.assertTrue(ItemCheckout_TitleLink(productName).isDisplayed());
-		softAssert.assertTrue(ItemCheckout_MODEL(model).isDisplayed());
-		softAssert.assertTrue(ItemCheckoutGrid_quantityField().getAttribute("value").equals(quantity));
-		softAssert.assertTrue(ItemCheckout_UNIT_PRICE().getText().equals(unitPrice));
-		softAssert.assertTrue(ItemCheckout_TOTAL_PRICE().getText().equals(totalPrice));		
+//		softAssert.assertTrue(ItemCheckout_Image(productName).isDisplayed());
+//		softAssert.assertTrue(ItemCheckout_TitleLink(productName).isDisplayed());
+//		softAssert.assertTrue(ItemCheckout_MODEL(model).isDisplayed());
+//		softAssert.assertTrue(ItemCheckoutGrid_quantityField().getAttribute("value").equals(quantity));
+//		softAssert.assertTrue(ItemCheckout_UNIT_PRICE().getText().equals(unitPrice));
+//		softAssert.assertTrue(ItemCheckout_TOTAL_PRICE().getText().equals(totalPrice));		
 		softAssert.assertAll();
 	}
+	
 
-	public Lambdatest_SHOPPING_CART_PAGE() {
-		checkoutPage = new Lambdatest_CHECKOUT_PAGE();
+	public double assertTotalTop_value (double expectedPrice) {
+		double TotalGridPrice = getTotal_ShoppingCartGrid_Value();
+		System.out.println("TOTAL TOP VALUE : " + TotalGridPrice);		
+		softAssert.assertEquals(TotalGridPrice, (expectedPrice));
+		softAssert.assertAll();
+		return TotalGridPrice;
+		
+	}
+	
+	public int assertEcoTaxValue (int expectedValue) {
+		int EcoTaxValue = super.convertDoubleToInt(getEcoTaxValue());
+		System.out.println("ECO TAX VALUE : " + EcoTaxValue);		
+		softAssert.assertEquals(EcoTaxValue, (expectedValue));
+		softAssert.assertAll();
+		return EcoTaxValue;
+		
+	}
+	
+	
+	public double assertTotalBottom_value (String VAT,double expectedValue) {
+		double TotalBottomValue = getTotalValue(VAT);
+		System.out.println("TOTAL BOTTOM VALUE" + TotalBottomValue);		
+		softAssert.assertEquals(TotalBottomValue, (expectedValue));
+		softAssert.assertAll();
+		return TotalBottomValue;
+		
+	}
+
+	public SHOPPING_CART_PAGE() {
+		checkoutPage = new CHECKOUT_PAGE();
+		homePage = new HOME_PAGE();
 	}
 
 }

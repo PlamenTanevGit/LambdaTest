@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class Lambdatest_HOME_PAGE extends base {
+public class HOME_PAGE extends base {
 
 	public WebElement Search_Field() {
 		return element = super.findElement("xpath",
@@ -109,8 +109,7 @@ public class Lambdatest_HOME_PAGE extends base {
 		}
 	}
 	
-
-
+	
 	public void homePageComponentsVerify() {
 		base.assertElementIsDisplayed(Search_Field());
 		base.assertElementIsDisplayed(Search_Field_Search_Button());
@@ -128,7 +127,7 @@ public class Lambdatest_HOME_PAGE extends base {
 
 	}
 
-	public Lambdatest_HOME_PAGE() {
+	public HOME_PAGE() {
 
 
 	}

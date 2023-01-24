@@ -7,12 +7,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import Pages.Lambdatest_HOME_PAGE;
-import Pages.Lambdatest_SEARCH_RESULT_PAGE;
+import Pages.HOME_PAGE;
+import Pages.SEARCH_RESULT_PAGE;
 import PagesEcommerce.DP;
 import PagesEcommerce.base;
 
-public class LAMBDA_TESTS_HomePage extends base {
+public class TESTS_HomePage extends base {
 
 //	String searchedProduct = "HTC";
 //	int searchedProductSize = 5;
@@ -34,7 +34,7 @@ public class LAMBDA_TESTS_HomePage extends base {
 		String[] elements = { "Components", "Cameras", "Phone, Tablets & Ipod", "Software", "MP3 Players",
 				"Laptops & Notebooks", "Desktops and Monitors", "Printers & Scanners", "Mice and Trackballs",
 				"Fashion and Accessories", "Beauty and Saloon", "Autoparts and Accessories", "Washing machine",
-				"Gaming consoles", "Air conditioner", "Web Camera" };
+				"Gaming consoles", "Air conditioner", "Web Cameras" };
 
 		List<WebElement> Str = super.getElementList(
 				"//div[@id='widget-navbar-217841']//ul[@class='navbar-nav vertical']//span", "xpath");
@@ -100,13 +100,26 @@ public class LAMBDA_TESTS_HomePage extends base {
 		// Assertion for result size after the search
 		Assert.assertTrue(Str.size() == size);
 
-		// Loop through the results by provided Elements locator and verify the results contain specific text
+		// Loop through the results by provided Elements locator
+		//and Assert the results contain specific text
 		for (int i = 0; i < Str.size(); i++) {
 			System.out.println(Str.get(i).getText());
 			Assert.assertTrue(Str.get(i).getText().contains(productName));
 			Assert.assertTrue(Str.get(i).getText().contains(price));
 		}
 
+	}
+	
+	@Test (enabled = true)	
+	public void t5 () {
+		// navigate to home page
+//				baseUrl = config.getProperty("homePage");
+//				base.openUrl(baseUrl);
+//				topHeader.headerElmentsVerify();
+//				topHeader.verifyMyAccountLoggedUserDropdown();
+//				topHeader.logOut();
+		
+			System.out.println(System.getProperty("user.dir"));
 	}
 
 }

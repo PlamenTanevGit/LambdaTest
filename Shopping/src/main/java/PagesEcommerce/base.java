@@ -36,12 +36,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
-import Pages.Lambdatest_CHECKOUT_ACCOUNT_REGISTER;
-import Pages.Lambdatest_CHECKOUT_PAGE;
-import Pages.Lambdatest_CONFIRM_ORDER_PAGE;
-import Pages.Lambdatest_HOME_PAGE;
-import Pages.Lambdatest_SEARCH_RESULT_PAGE;
-import Pages.Lambdatest_SHOPPING_CART_PAGE;
+import Pages.ACCOUNT_REGISTER_page;
+import Pages.CHECKOUT_PAGE;
+import Pages.CONFIRM_ORDER_PAGE;
+import Pages.HOME_PAGE;
+import Pages.SEARCH_RESULT_PAGE;
+import Pages.SHOPPING_CART_PAGE;
+import Pages.SUCCESS_PAGE;
+import Pages.TOP_HEADER;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base {
@@ -68,25 +70,23 @@ public class base {
 	static long endTime;
 	public static SoftAssert softAssert;
 	public WebDriverWait wait;
-	
+
 	/** Pages */
-	protected Lambdatest_HOME_PAGE homePage;
-	protected Lambdatest_SEARCH_RESULT_PAGE searchResultPage;
-	protected Lambdatest_SHOPPING_CART_PAGE shoppingCartPage;
-	protected Lambdatest_CHECKOUT_PAGE checkoutPage;
-	protected Lambdatest_CHECKOUT_ACCOUNT_REGISTER accountRegisterPage;
-	protected Lambdatest_CONFIRM_ORDER_PAGE confirmOrderPage;
-	
-	
+	protected HOME_PAGE homePage;
+	protected SEARCH_RESULT_PAGE searchResultPage;
+	protected SHOPPING_CART_PAGE shoppingCartPage;
+	protected CHECKOUT_PAGE checkoutPage;
+	protected ACCOUNT_REGISTER_page accountRegisterPage;
+	protected CONFIRM_ORDER_PAGE confirmOrderPage;
+	protected TOP_HEADER topHeader;
+	protected SUCCESS_PAGE successPage;
+
 	public static WebDriver initialise(String browser) {
 
 		/** create Chrome options */
 		ChromeOptions chromeOptions = new ChromeOptions();
 
 		if (browser.equalsIgnoreCase("chrome")) {
-//			System.setProperty("webdriver.chrome.driver",
-//					System.getProperty("user.dir") + "\\executables\\chromedriver.exe");
-
 			WebDriverManager.chromedriver().setup();
 			// WebDriverManager.chromedriver().driverVersion(" 95.0.4638.54").setup(); //
 			// 98.0.4758.80 // 95.0.4638.54 // 99.0.4844.151
@@ -101,10 +101,7 @@ public class base {
 			driver = new ChromeDriver(chromeOptions);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
-//			System.setProperty("webdriver.gecko.driver",
-//					System.getProperty("user.dir") + "\\executables\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup();
-
 			driver = new FirefoxDriver();
 		}
 
@@ -126,9 +123,9 @@ public class base {
 		 */
 		driver.manage().timeouts().setScriptTimeout(SCRIPT_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
+
 		return driver;
- 
+
 	}
 
 	public static void initConfiguration() {
@@ -177,30 +174,18 @@ public class base {
 		switch (locatorType.toLowerCase()) {
 		case "id":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id(locatorPath))));
-		// driver.findElement(By.id(locatorPath));
-
 		case "xpath":
 			return driver.findElement(By.xpath(locatorPath));
-
 		case "name":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.name(locatorPath))));
-		// driver.findElement(By.name(locatorPath));
-
 		case "classname":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className(locatorPath))));
-		// driver.findElement(By.className(locatorPath));
-
 		case "cssselector":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(locatorPath))));
-		// driver.findElement(By.cssSelector(locatorPath));
-
 		case "linktext":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.linkText(locatorPath))));
-		// driver.findElement(By.linkText(locatorPath));
-
 		case "tagname":
 			return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.tagName(locatorPath))));
-		// driver.findElement(By.tagName(locatorPath));
 
 		default:
 			throw new RuntimeException("Unknown locator " + locatorType + " : " + locatorPath);
@@ -299,27 +284,27 @@ public class base {
 			// element.click();
 			// Reporter.log("Successfully click on element " + element.getText());
 		} catch (StaleElementReferenceException e) {
-
 			e.printStackTrace();
-
 		}
 	}
-	
-	public static void pseudoClickJavascript(String cssPath,String key) {
-		
+
+	public static void pseudoClickJavascript(String cssPath, String key) {
+
 		switch (key) {
 		case "before":
-			((JavascriptExecutor)driver).executeScript("document.querySelector(arguments[0],':before').click();",cssPath);
+			((JavascriptExecutor) driver).executeScript("document.querySelector(arguments[0],':before').click();",
+					cssPath);
 			break;
-			
+
 		case "after":
-			((JavascriptExecutor)driver).executeScript("document.querySelector(arguments[0],':after').click();",cssPath);
+			((JavascriptExecutor) driver).executeScript("document.querySelector(arguments[0],':after').click();",
+					cssPath);
 			break;
 
 		default:
 			break;
 		}
-	
+
 	}
 
 	/*
@@ -405,52 +390,55 @@ public class base {
 
 		}
 	}
-	
-	public int convertDoubleToInt (double doubleAmount) {
+
+	public int convertDoubleToInt(double doubleAmount) {
 		int a = 0;
 		Double newData = new Double(doubleAmount);
 		return a = newData.intValue();
 	}
 
 	public List<WebElement> visiblilityOfAllElements(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOfAllElements(driver.findElements(locator)));
-        return driver.findElements(locator);
-    }
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		wait.until(ExpectedConditions.visibilityOfAllElements(driver.findElements(locator)));
+		return driver.findElements(locator);
+	}
 
-    public WebElement waitForElementToBePresent(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        return getElement(locator);
-    } 
+	public WebElement waitForElementToBePresent(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		return getElement(locator);
+	}
 
-    public WebElement waitForElementToBeClickable(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-        return getElement(locator);
-    } 
+	public WebElement waitForElementToBeClickable(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		return getElement(locator);
+	}
 
-    public WebElement waitForElementToBeVisbile(By locator, int timeout) {
-        WebElement element = getElement(locator);
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        return element;
-    }
+	public WebElement waitForElementToBeVisbile(By locator, int timeout) {
+		WebElement element = getElement(locator);
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		wait.until(ExpectedConditions.visibilityOf(element));
+		return element;
+	}
 
-    public void clickWhenReady(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
-        getElement(locator).click();
-    }
+	public void clickWhenReady(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+		getElement(locator).click();
+	}
 
-    public WebElement getElement(By locator) {
-        WebElement element = driver.findElement(locator);
-        return element;
-    }   
+	public WebElement getElement(By locator) {
+		WebElement element = driver.findElement(locator);
+		return element;
+	}
 
-	/*FileWriter method - can write down in a .txt particular data getted from an WebElement*/
-	public static String FileWriter(WebElement ele,String filePath) throws IOException {
-		
+	/*
+	 * FileWriter method - can write down in a .txt particular data getted from an
+	 * WebElement
+	 */
+	public static String FileWriter(WebElement ele, String filePath) throws IOException {
+
 		File f1 = new File(filePath);
 		java.io.FileWriter fw = new java.io.FileWriter(f1);
 		String text = ele.getText();
@@ -467,7 +455,7 @@ public class base {
 		java.io.FileWriter fw = new java.io.FileWriter(f1);
 
 		Reporter.log("Credit card No :" + chosenString);
-		System.out.println("Credit card No : "+chosenString);
+		System.out.println("Credit card No : " + chosenString);
 		fw.write(chosenString);
 		fw.close();
 		return chosenString;
@@ -487,7 +475,8 @@ public class base {
 			}
 		}
 	}
-	/* File Reader Method - read data from .txt*/
+
+	/* File Reader Method - read data from .txt */
 	public static String getStoredString(String filePath, int chars) throws IOException {
 
 		File f1 = new File(filePath);
@@ -500,7 +489,7 @@ public class base {
 		return s;
 
 	}
-	
+
 	public static String randomString(int lenght) {
 		String characters = "abcdefghijklmnopqrstuvwxyz";
 		String randomString = "";
@@ -517,6 +506,8 @@ public class base {
 		}
 		return randomString;
 	}
+	
+	
 
 	@BeforeSuite
 	public void beforeSuite() {
@@ -530,14 +521,17 @@ public class base {
 	public void beforeClass() {
 		initialise(BROWSER);
 		Reporter.log(BROWSER + " is Initialised");
+
 		initConfiguration();
 
-		homePage = new Lambdatest_HOME_PAGE();
-		searchResultPage = new Lambdatest_SEARCH_RESULT_PAGE();		
-		shoppingCartPage = new Lambdatest_SHOPPING_CART_PAGE();
-		checkoutPage = new Lambdatest_CHECKOUT_PAGE();
-		accountRegisterPage = new Lambdatest_CHECKOUT_ACCOUNT_REGISTER();
-		confirmOrderPage = new Lambdatest_CONFIRM_ORDER_PAGE();
+		homePage = new HOME_PAGE();
+		searchResultPage = new SEARCH_RESULT_PAGE();
+		shoppingCartPage = new SHOPPING_CART_PAGE();
+		checkoutPage = new CHECKOUT_PAGE();
+		accountRegisterPage = new ACCOUNT_REGISTER_page();
+		confirmOrderPage = new CONFIRM_ORDER_PAGE();
+		topHeader = new TOP_HEADER();
+		successPage = new  SUCCESS_PAGE();
 	}
 
 	@AfterClass
