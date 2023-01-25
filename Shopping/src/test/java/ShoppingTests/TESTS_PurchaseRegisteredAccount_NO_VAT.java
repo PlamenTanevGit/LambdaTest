@@ -54,7 +54,9 @@ public class TESTS_PurchaseRegisteredAccount_NO_VAT extends base {
 		// Fill Personal Details Side Form
 		accountRegisterPage.fillPersonalAndAddressData(
 				or.getProperty("country"),
-				or.getProperty("city2"));
+				or.getProperty("city2"),
+				"RegisteredAccount");
+		
 		
 		// click on inner Update button to update the info
 		checkoutPage.clickOnUpdate_button();

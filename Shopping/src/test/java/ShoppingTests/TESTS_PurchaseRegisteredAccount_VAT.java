@@ -54,7 +54,9 @@ public class TESTS_PurchaseRegisteredAccount_VAT extends base {
 		// Fill Personal Details Side Form
 		accountRegisterPage.fillPersonalAndAddressData(
 				or.getProperty("country3"),
-				or.getProperty("city3"));
+				or.getProperty("city3"),
+				"RegisteredAccount");
+		
 		// ASSERTION VAT is displayed
 		super.verifyEqualTexts(checkoutPage.VAT_label(), "VAT (20%):");
 				
@@ -191,7 +193,7 @@ public class TESTS_PurchaseRegisteredAccount_VAT extends base {
 		// Fill Personal Details Side Form
 		accountRegisterPage.addPersonalDetails(accountRegisterPage.firstName, accountRegisterPage.lastName,
 				accountRegisterPage.email, accountRegisterPage.telephone, accountRegisterPage.password,
-				accountRegisterPage.password);
+				accountRegisterPage.password, "RegisteredAccount");
 
 		// Fill AddBilling Address side form
 		accountRegisterPage.addBillingAddress(accountRegisterPage.company, accountRegisterPage.address1,

@@ -317,13 +317,35 @@ public class AccountRegister_page extends base {
 		return searchedRegion;
 	}
 
-	public void addPersonalDetails(String fn, String ln, String email, String phone, String password, String confPass) {
-		setFirstName(fn);
-		setLastName(ln);
-		setEmail(email);
-		setTelephone(phone);
-		setPassword(password);
-		setConfirmPassword(confPass);
+	public void addPersonalDetails(String fn, String ln, String email, String phone, String password, String confPass, String purchaseType) {
+
+		switch (purchaseType) {
+		
+		case "RegisteredAccount":
+			
+			setFirstName(fn);
+			setLastName(ln);
+			setEmail(email);
+			setTelephone(phone);
+			setPassword(password);
+			setConfirmPassword(confPass);
+			
+			break;
+			
+		case "Guest":
+			
+			setFirstName(fn);
+			setLastName(ln);
+			setEmail(email);
+			setTelephone(phone);
+			
+			break;
+			
+		default:
+			break;
+		}
+		
+		
 
 	}
 
@@ -339,14 +361,15 @@ public class AccountRegister_page extends base {
 
 	}
 	
-	public void fillPersonalAndAddressData(String country,String city) {
+	public void fillPersonalAndAddressData(String country,String city, String purchaseType) {
 		addPersonalDetails(
 				or.getProperty("firstName") + base.randomString(3),
 				or.getProperty("lastName") + base.randomString(3),
 				or.getProperty("email") + base.randomString(3)+"@test.com",
 				or.getProperty("phone"),
 				or.getProperty("password"),
-				or.getProperty("passwordConfirm")
+				or.getProperty("passwordConfirm"),
+				purchaseType
 				);
 		addBillingAddress(	
 				or.getProperty("company") + base.randomString(3),
@@ -355,7 +378,7 @@ public class AccountRegister_page extends base {
 				or.getProperty("city1"),
 				or.getProperty("postCode"),
 				country,
-				city
+				city				
 				);
 	}
 

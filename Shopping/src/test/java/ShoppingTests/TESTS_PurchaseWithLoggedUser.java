@@ -48,7 +48,11 @@ public class TESTS_PurchaseWithLoggedUser extends base {
 		 */
 
 		// Fill Personal Details Side Form
-		accountRegisterPage.fillPersonalAndAddressData(or.getProperty("country3"), or.getProperty("city3"));
+		accountRegisterPage.fillPersonalAndAddressData(
+				or.getProperty("country3"), 
+				or.getProperty("city3"),
+				"RegisteredAccount");
+		
 		// ASSERTION VAT is displayed
 		super.verifyEqualTexts(checkoutPage.VAT_label(), "VAT (20%):");
 
