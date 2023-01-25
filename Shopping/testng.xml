@@ -27,24 +27,35 @@
     </classes>
   </test>
   
-    <test thread-count="5" name="Add / Remove Items tests">
+   <test thread-count="5" name="Add / Remove Items tests">
     <classes>
       <class name="ShoppingTests.TESTS_ShoppingCartAddRemoveItems"/>
     </classes>
   </test>
   
-    <test thread-count="5" name="Purchase - Registered Account from country having VAT">
+   <test thread-count="5" name="Purchase - Registered Account from country having VAT">
     <classes>
       <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT"/>
     </classes>
   </test>
   
-    <test thread-count="5" name="Purchase - Registered Account from country Not having VAT">
+   <test thread-count="5" name="Purchase - Registered Account from country Not having VAT">
     <classes>
       <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT"/>
     </classes>
   </test>
   
+   <test thread-count="5" name="Purchase - Guest Account from country Not having VAT">
+    <classes>
+      <class name="ShoppingTests.TESTS_PurchaseGuest_NO_VAT"/>
+    </classes>
+  </test>
+  
+     <test thread-count="5" name="Purchase - Guest Account from country having VAT">
+    <classes>
+      <class name="ShoppingTests.TESTS_PurchaseGuest_VAT"/>
+    </classes>
+  </test>
  
   <!--  -->
  

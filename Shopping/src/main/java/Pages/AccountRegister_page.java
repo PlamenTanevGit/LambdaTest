@@ -135,6 +135,20 @@ public class AccountRegister_page extends base {
 
 	}
 	
+	public WebElement GuestCheckout_radioButton() {
+		return element = super.findElement("xpath", "//label[@for='input-account-guest']");
+
+	}
+	
+	public void selectGuestCheckout() {
+		try {	
+			super.jSClick(GuestCheckout_radioButton());			
+		} catch (StaleElementReferenceException e) {
+			System.out.println(e);
+			GuestCheckout_radioButton().click();			
+		}
+	}
+	
 	public void clickOnContinueButton() {
 		try {
 			wait = new WebDriverWait(driver, 4);
