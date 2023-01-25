@@ -87,12 +87,27 @@ public class SearchResults_page extends base {
 
 	public void addToCartMultipleItems(String itemNumber, int itemsNumber) throws InterruptedException {
 		try {
-			super.movesToTheElement(SearchPage_SearchResult_ProductListItem("1"));
+			super.movesToTheElement(SearchPage_SearchResult_ProductListItem(itemNumber));
 			for (int i = 0; i < itemsNumber; i++) {
 				super.jSClick(SearchPage_ProductList_AddToCart_button());
 				Thread.sleep(150);			
 			}
 			super.jSClick(AddToCart_popUp_ViewCart_button());		
+	
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void checkoutMultipleItems(String itemNumber, int itemsNumber) throws InterruptedException {
+		try {
+			super.movesToTheElement(SearchPage_SearchResult_ProductListItem(itemNumber));
+			for (int i = 0; i < itemsNumber; i++) {
+				super.jSClick(SearchPage_ProductList_AddToCart_button());
+				Thread.sleep(150);			
+			}
+			super.jSClick(AddToCart_popUp_CheckOut_button());	
 	
 		} catch (ElementNotVisibleException e) {
 			e.printStackTrace();
@@ -120,6 +135,20 @@ public class SearchResults_page extends base {
 			super.movesToTheElement(AddToCart_popUp_ViewCart_button());
 			super.jSClick(AddToCart_popUp_ViewCart_button());			
 			wait.until(ExpectedConditions.visibilityOf(shoppingCartPage.shoppingCart_topLeftIcon()));
+	
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void selectCheckout() {
+		
+		try {
+			wait = new WebDriverWait(driver, 4);
+			super.movesToTheElement(AddToCart_popUp_CheckOut_button());
+			super.jSClick(AddToCart_popUp_CheckOut_button());			
+			wait.until(ExpectedConditions.visibilityOf(accountRegisterPage.YourPersonalDetails_form_window()));
 	
 		} catch (ElementNotVisibleException e) {
 			e.printStackTrace();

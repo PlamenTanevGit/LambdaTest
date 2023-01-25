@@ -157,7 +157,7 @@ public class base {
 		}
 
 	}
-	
+
 	public static void openUrl(String url) {
 		driver.get(url);
 		Reporter.log("Successfully opened url '" + url + "'");
@@ -166,14 +166,15 @@ public class base {
 	public static void assertElementIsDisplayed(WebElement element) {
 		Assert.assertTrue(element.isDisplayed());
 	}
-	  public void softAssertElementIsNotDisplayed(By locator) {
 
-	        List<WebElement> searchedElemeents = driver.findElements(locator);
-	        System.out.println(searchedElemeents.size());
-	        softAssert.assertTrue(searchedElemeents.isEmpty());
-	        softAssert.assertAll();
-	  
-	  }
+	public void softAssertElementIsNotDisplayed(By locator) {
+
+		List<WebElement> searchedElemeents = driver.findElements(locator);
+		System.out.println(searchedElemeents.size());
+		softAssert.assertTrue(searchedElemeents.isEmpty());
+		softAssert.assertAll();
+
+	}
 
 	/*
 	 * WebElement returns element based on different locator
@@ -245,7 +246,7 @@ public class base {
 		} catch (StaleElementReferenceException e) {
 			System.out.println(e);
 		}
-		
+
 		return element;
 	}
 
@@ -449,8 +450,6 @@ public class base {
 		return element;
 	}
 
-
-
 	/* check all checkBoxSelection method - capturing them by common tagName */
 	public void TermsAndConditionsclickAllCheckBoxes(String tagname, String attribute, String text) {
 		List<WebElement> list = driver.findElements(By.tagName(tagname));
@@ -481,8 +480,6 @@ public class base {
 		}
 		return randomString;
 	}
-	
-	
 
 	@BeforeSuite
 	public void beforeSuite() {
@@ -506,7 +503,7 @@ public class base {
 		accountRegisterPage = new AccountRegister_page();
 		confirmOrderPage = new ConfirmOrder_page();
 		topHeader = new TopHeader_page();
-		successPage = new  Success_page();
+		successPage = new Success_page();
 		loginPage = new Login_page();
 		myAccountPage = new MyAccount_page();
 	}

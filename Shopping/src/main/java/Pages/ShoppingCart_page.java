@@ -130,6 +130,21 @@ public class ShoppingCart_page extends base {
 				"//div[@class='buttons']/a");
 	
 	}
+	
+	public void clickOnContinueShoppingButton () {
+		try {
+			wait = new WebDriverWait(driver, 4);
+			super.movesToTheElement(ContinueShoppingButton());
+			super.jSClick(ContinueShoppingButton());
+			wait.until(ExpectedConditions.visibilityOf(homePage.Search_Field_Search_Button()));
+	
+		} catch (ElementNotVisibleException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	
 
 	public void clickOnContinueButton () {
 		try {
