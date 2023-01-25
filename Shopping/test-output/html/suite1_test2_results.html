@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - SHOPPING CART TESTS</title>
+  <title>Test Results Report - Login Tests</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>SHOPPING CART TESTS</h1>
+<h1>Login Tests</h1>
 <p>
-  Test duration: 22.001s
+  Test duration: 6.042s
 </p>
 
 
@@ -22,22 +22,25 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount</td>
+        <td colspan="3" class="group">ShoppingTests.TESTS_Login</td>
       </tr>
             
 <tr>
   <td class="method">
-                  d1
+                  <span class="description" title="This Test performs Login with valid Credentials">t1_Login_Valid_UserCredentials</span>
       </td>
   <td class="duration">
-    0.002s
+    4.027s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        Starting test method:d1<br />
-                                d1 is Passed<br />
+                        Starting test method:t1_Login_Valid_UserCredentials<br />
+                                Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=account/login&apos;<br />
+                                 Enter value : plamen.tanev31@gmail.com<br />
+                                 Enter value : 1234<br />
+                                t1_Login_Valid_UserCredentials is Passed<br />
                   </div>
     
 
@@ -45,81 +48,20 @@
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="This test performs search product and verifies the found product">t1_shoppingCartVerificationAndRemoveProducts</span>
+                  <span class="description" title="This Test performs Login with Invalid Credentials and Asserts warning message is displayed ">t2_Login_Invalid_UserCredentials</span>
       </td>
   <td class="duration">
-    6.011s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"HTC Touch HD", "Product 1", "1", "$146.00", "$146.00"</span><br />
-    
-            <div class="testOutput">
-                        Starting test method:t1_shoppingCartVerificationAndRemoveProducts<br />
-                                Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
-                                 Enter value : HTC Touch HD<br />
-                                Text : Checkout - is Verified<br />
-                                Text : View Cart - is Verified<br />
-                                Page title&nbsp; is Verified<br />
-                                Text : IMAGE - is Verified<br />
-                                Text : PRODUCT NAME - is Verified<br />
-                                Text : MODEL - is Verified<br />
-                                Text : QUANTITY - is Verified<br />
-                                Text : UNIT PRICE - is Verified<br />
-                                Text : TOTAL - is Verified<br />
-                                t1_shoppingCartVerificationAndRemoveProducts is Passed<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="This test performs search product and verifies the found product">t2_shopingCart_AddMultipleItemsVerification</span>
-      </td>
-  <td class="duration">
-    4.575s
+    0.927s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        Starting test method:t2_shopingCart_AddMultipleItemsVerification<br />
-                                Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
-                                 Enter value : HTC Touch HD<br />
-                                t2_shopingCart_AddMultipleItemsVerification is Passed<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="This test performs search product and verifies the found product">t3_CheckoutItem</span>
-      </td>
-  <td class="duration">
-    10.335s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"firstName_kkq", "lastName_ssm", "email_chc@email.com", "+359123123123", "passlli", "company_quz", "address1_duz", "address2_qlr", "Sofia", "1111", "Bulgaria", "Sofia"</span><br />
-    
-            <div class="testOutput">
-                        Starting test method:t3_CheckoutItem<br />
-                                Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
-                                 Enter value : HTC Touch HD<br />
-                                 Enter value : firstName_kkq<br />
-                                 Enter value : lastName_ssm<br />
-                                 Enter value : email_chc@email.com<br />
-                                 Enter value : +359123123123<br />
-                                 Enter value : passlli<br />
-                                 Enter value : passlli<br />
-                                 Enter value : company_quz<br />
-                                 Enter value : address1_duz<br />
-                                 Enter value : address2_qlr<br />
-                                 Enter value : Sofia<br />
-                                 Enter value : 1111<br />
-                                t3_CheckoutItem is Passed<br />
+                        Starting test method:t2_Login_Invalid_UserCredentials<br />
+                                Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=account/login&apos;<br />
+                                 Enter value : plamen.tanev31@gmail.com<br />
+                                 Enter value : 5555<br />
+                                t2_Login_Invalid_UserCredentials is Passed<br />
                   </div>
     
 

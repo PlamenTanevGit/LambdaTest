@@ -1,15 +1,15 @@
 package Pages;
 
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import PagesEcommerce.base;
 
-public class TOP_HEADER extends base {
+public class TopHeader_page extends base {
 
 	public WebElement topHeaderMenusRow() {
 		return element = super.findElement("xpath",
@@ -130,8 +130,6 @@ public class TOP_HEADER extends base {
             System.out.println("Element " + element + " was not clickable " + e.getStackTrace());
         }
 		
-		
-		
 	}
 	
 	public void headerElmentsVerify() {
@@ -154,7 +152,7 @@ public class TOP_HEADER extends base {
 
 	}
 
-	public TOP_HEADER() {
+	public TopHeader_page() {
 		
 		
 

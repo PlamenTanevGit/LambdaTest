@@ -1,91 +1,17 @@
 package ShoppingTests;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import PagesEcommerce.DP;
 import PagesEcommerce.base;
 
-public class TESTS_ShoppingCartRegisterAccount extends base {
+public class TESTS_PurchaseRegisteredAccount_VAT extends base {
 
-	/**
-	 * Tests in this class are for NON Registered User
-	 */
-
-	@Test(alwaysRun = true, dataProviderClass = DP.class, dataProvider = "productInputs", description = "This test performs search product and verifies the found product")
-	public void t1_shoppingCartVerificationAndRemoveProducts(String productName, String model, String quantity,
-			String unitPrice, String totalPrice) throws InterruptedException {
-
-		// navigate to home page
-		baseUrl = config.getProperty("homePage");
-		base.openUrl(baseUrl);
-
-		// Enter product in the Search field and click on Search button
-		homePage.enterProductInSearchField(productName);
-		homePage.clickOnSearch();
-
-		// Hover on the desired Product (by number) and click on Add to cart
-		searchResultPage.addToCart("1");
-		super.assertElementIsDisplayed(searchResultPage.AddToCart_popUp());
-		super.verifyEqualTexts(searchResultPage.AddToCart_popUp_CheckOut_button(), "Checkout");
-		super.verifyEqualTexts(searchResultPage.AddToCart_popUp_ViewCart_button(), "View Cart");
-
-		// click on ViewCart and open the View Cart page
-		searchResultPage.selectViewCart();
-		super.pageTitleVerify("Shopping Cart");
-
-		// Shopping Cart Grid and Components assertions for Displayed and Text
-		shoppingCartPage.shoppingCartPageComponentsVerify(productName, model, quantity, unitPrice, totalPrice);
-
-		// click on Remove button and clean the Quantity and Assert Displayed message
-		shoppingCartPage.clickOnRemoveQuantity();
-		super.assertElementIsDisplayed(shoppingCartPage.Message_EmptyCart());
-
-	}
-
-	@Test(alwaysRun = true, description = "This test performs search product and verifies the found product")	
-	public void t2_shopingCart_AddMultipleItemsVerification() throws InterruptedException {
-		// Provide number of items that will be added in the Cart
-		int numberOfAddedItems = 3;
-		String productPrice = null;
-
-		baseUrl = config.getProperty("homePage");
-		base.openUrl(baseUrl);
-
-		// Enter product in the Search field and click on Search button
-		homePage.enterProductInSearchField("HTC Touch HD");
-		homePage.clickOnSearch();
-
-		// Get the Product price from Article as String
-		productPrice = searchResultPage.getPriceFromArticle("1");
-
-		// Convert the Price to double
-		double priceDouble = searchResultPage.getThePriceAmount(productPrice);
-
-		// Perform adding of N number of items in the Cart
-		searchResultPage.addToCartMultipleItems("1", numberOfAddedItems);
-
-		// ASSERTION - UNIT Price = chosen product captured price
-		double UnitPricFromGrid = shoppingCartPage.getUnitPrice_ShoppingCartGrid_Value();
-		softAssert.assertEquals(UnitPricFromGrid, (priceDouble));
-
-		// ASSERTION - Total Grid Price == UnitPrice * numberOfAddedItems
-		double TotalTopValue = shoppingCartPage.assertTotalTop_value((priceDouble * numberOfAddedItems));
-
-		// ASSERTION - ECO Tax value
-		shoppingCartPage.assertEcoTaxValue(numberOfAddedItems * 2);
-
-		// Assertion Total Top Value == Total bottom value
-		shoppingCartPage.assertTotalBottom_value("VAT_YES", TotalTopValue);
-
-		// Click on Remove button to Empty the Cart
-		shoppingCartPage.clickOnRemoveQuantity();
-		shoppingCartPage.clickOnContinueButton();
-	}
-
+	
 	@Test(alwaysRun = true,
-//			dataProviderClass = DP.class, dataProvider = "productInputs",
-			description = "This test performs search product and verifies the found product")
-	public void t3_CheckoutItemWithVAT() throws InterruptedException {
+			description = "This test search for product then do a checkout by selection of country with VAT")
+	public void CheckoutItem_With_VAT() throws InterruptedException {
 		// Provide number of items that will be added in the Cart
 		int numberOfAddedItems = 1;
 		String productPrice = null;
@@ -94,7 +20,7 @@ public class TESTS_ShoppingCartRegisterAccount extends base {
 		base.openUrl(baseUrl);
 
 		// Enter product in the Search field and click on Search button
-		homePage.enterProductInSearchField("HTC Touch HD");
+		homePage.enterProductInSearchField(or.getProperty("product1"));
 		homePage.clickOnSearch();
 
 		// Get the Product price from Article as String
@@ -112,11 +38,11 @@ public class TESTS_ShoppingCartRegisterAccount extends base {
 
 		// ASSERTION - Total Grid Price == UnitPrice * numberOfAddedItems
 		double TotalTopValue = shoppingCartPage.assertTotalTop_value((priceDouble * numberOfAddedItems));
-
+		
 		// ASSERTION - ECO Tax value
 		shoppingCartPage.assertEcoTaxValue(numberOfAddedItems * 2);
 
-		// Assertion Total Top Value == Total bottom value
+		// ASSERTION Total Top Value == Total bottom value
 		shoppingCartPage.assertTotalBottom_value("VAT_YES", TotalTopValue);	
 		
 		// Select the Checkout
@@ -127,23 +53,14 @@ public class TESTS_ShoppingCartRegisterAccount extends base {
 		// ASSERTIONS ON THE CHECKOUT FORM LABELS AND FLAT VALUE
 
 		// Fill Personal Details Side Form
-		accountRegisterPage.addPersonalDetails(
-				"firstName_" + base.randomString(3),
-				"lastName_" + base.randomString(3),
-				"email_" + base.randomString(3) + "@email.com",
-				"+359123123123", 
-				"1234",
-				"1234");
-
-		// Fill AddBilling Address side form
-		accountRegisterPage.addBillingAddress(
-				"company_" + base.randomString(3),
-				"address1_" + base.randomString(3),
-				"address2_" + base.randomString(3),
-				"Sofia",
-				"1111",
-				"Bulgaria",
-				"Sofia");
+		accountRegisterPage.fillPersonalAndAddressData(
+				or.getProperty("country3"),
+				or.getProperty("city3"));
+		// ASSERTION VAT is displayed
+		super.verifyEqualTexts(checkoutPage.VAT_label(), "VAT (20%):");
+				
+		// click on inner Update button to update the info
+		checkoutPage.clickOnUpdate_button();
 
 		// Check the Privacy Policy and Terms and Conditions
 		accountRegisterPage.checkPrivacyPolicy();
@@ -174,20 +91,44 @@ public class TESTS_ShoppingCartRegisterAccount extends base {
 		 */
 		softAssert.assertAll();
 		
-		// Click on Confirm Order and assert the Confirm screen
+		// Click on Confirm Order and assert the Confirm screen 
+		confirmOrderPage.ConfirmOrder();
+		// Click on Continue Button and verifu landing on home page
+		successPage.clickOnContinue_button();
+		super.assertElementIsDisplayed(homePage.Search_Field());
 	}
 
-	@Test
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/***
+	 * NOT executing /DRAFTS/
+	 */
+	
+	
+	@Test (enabled =   false)
 	public void ggg() {
 		System.out.println(accountRegisterPage.getSubTotalAmount());
 		System.out.println(accountRegisterPage.getFlatShippingRateAmmount());
 		System.out.println(accountRegisterPage.getEcoTaxAmount());
 		System.out.println(accountRegisterPage.getVATAmount());
-		System.out.println(accountRegisterPage.getTotalAmount("VAT_YES"));
+		System.out.println(accountRegisterPage.getTotalAmount("VAT_NO"));
 
+		System.out.println(confirmOrderPage.getSubTotalAmount());
+		System.out.println(confirmOrderPage.getFlatShippingRateAmount());
+		System.out.println(confirmOrderPage.getTotalAmount("VAT_NO"));
 	}
 
-	@Test(alwaysRun = false, dataProviderClass = DP.class, dataProvider = "productInputs", description = "This test performs search product and verifies the found product")
+	@Test(enabled = false, dataProviderClass = DP.class, dataProvider = "productInputs", description = "This test performs search product and verifies the found product")
 	public void TBD(String fn, String ln, String em, String ph, String pass, String cmpn, String addr1, String addr2,
 			String city, String pc, String cntry, String rgn, String VAT) throws InterruptedException {
 
@@ -300,12 +241,4 @@ public class TESTS_ShoppingCartRegisterAccount extends base {
 //		topHeader.logOut();
 
 	}
-
-	@Test
-	public void d1() {
-		System.out.println(confirmOrderPage.getSubTotalAmount());
-		System.out.println(confirmOrderPage.getFlatShippingRateAmount());
-		System.out.println(confirmOrderPage.getTotalAmount("VAT_YES"));
-	}
-
 }

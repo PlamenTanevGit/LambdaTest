@@ -3,7 +3,6 @@ package Pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class ACCOUNT_REGISTER_page extends base {
+public class AccountRegister_page extends base {
 
 	public String firstName;
 	public String lastName;
@@ -339,6 +338,26 @@ public class ACCOUNT_REGISTER_page extends base {
 		selectRegionState(region);
 
 	}
+	
+	public void fillPersonalAndAddressData(String country,String city) {
+		addPersonalDetails(
+				or.getProperty("firstName") + base.randomString(3),
+				or.getProperty("lastName") + base.randomString(3),
+				or.getProperty("email") + base.randomString(3)+"@test.com",
+				or.getProperty("phone"),
+				or.getProperty("password"),
+				or.getProperty("passwordConfirm")
+				);
+		addBillingAddress(	
+				or.getProperty("company") + base.randomString(3),
+				or.getProperty("address1") + base.randomString(3),
+				or.getProperty("address2") + base.randomString(3),
+				or.getProperty("city1"),
+				or.getProperty("postCode"),
+				country,
+				city
+				);
+	}
 
 	public String selectDropdownOptionByTagName(WebElement dropdown, String tagName, String searchedOption) {
 		try {
@@ -441,9 +460,9 @@ public class ACCOUNT_REGISTER_page extends base {
 	}
 	
 	
-	public ACCOUNT_REGISTER_page() {
+	public AccountRegister_page() {
 		
-		confirmOrderPage = new CONFIRM_ORDER_PAGE();
+		confirmOrderPage = new ConfirmOrder_page();
 
 	}
 

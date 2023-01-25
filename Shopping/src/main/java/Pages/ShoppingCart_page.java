@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class SHOPPING_CART_PAGE extends base {
+public class ShoppingCart_page extends base {
 
 	
 	
@@ -302,9 +302,9 @@ public class SHOPPING_CART_PAGE extends base {
 		
 	}
 
-	public SHOPPING_CART_PAGE() {
-		checkoutPage = new CHECKOUT_PAGE();
-		homePage = new HOME_PAGE();
+	public ShoppingCart_page() {
+		checkoutPage = new Checkout_page();
+		homePage = new Home_page();
 	}
 
 }

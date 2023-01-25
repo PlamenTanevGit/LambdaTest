@@ -1,7 +1,6 @@
 package ShoppingTests;
 
 import java.text.DecimalFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class testOercent2 {

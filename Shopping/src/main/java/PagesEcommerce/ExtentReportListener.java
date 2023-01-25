@@ -29,12 +29,12 @@ public class ExtentReportListener extends base implements ITestListener {
     private static final String OUTPUT_FOLDER = "./build/";
     private static final String FILE_NAME = "TestExecutionReport.html";
 
-    protected static ExtentTest extentTest;
-    private static ExtentReports extent = init();
+    public static ExtentTest extentTest;
+    public static ExtentReports extent = init();
     public static ThreadLocal<ExtentTest> ThreadLocalTest = new ThreadLocal<ExtentTest>();
-    private static ExtentReports extentReports;
+    public static ExtentReports extentReports;
 
-    private static ExtentReports init() {
+    public static ExtentReports init() {
 
         Path path = Paths.get(OUTPUT_FOLDER);
         // if directory exists?

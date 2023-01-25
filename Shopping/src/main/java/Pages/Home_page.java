@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class HOME_PAGE extends base {
+public class Home_page extends base {
 
 	public WebElement Search_Field() {
 		return element = super.findElement("xpath",
@@ -127,7 +127,7 @@ public class HOME_PAGE extends base {
 
 	}
 
-	public HOME_PAGE() {
+	public Home_page() {
 
 
 	}

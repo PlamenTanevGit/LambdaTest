@@ -3,23 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="PagesEcommerce.ExtentReportListener"/>
     <listener class-name="PagesEcommerce.Listners"/>
   </listeners>
-  <test thread-count="5" name="HOME PAGE TESTS(failed)">
+  <test thread-count="5" name="Purchase with logged user test(failed)">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_HomePage">
+      <class name="ShoppingTests.TESTS_PurchaseWithLoggedUser">
         <methods>
           <include name="afterSuite"/>
-          <include name="t2_SearchField_verifyAutoSuggestResults"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
-          <include name="t3_search_ProductInTheSearchFieldAndVerifyResults"/>
+          <include name="t1_LoginAndPurchase"/>
           <include name="beforeClass"/>
-          <include name="t1_verifyLambdaTest_HomePageElements"/>
         </methods>
-      </class> <!-- ShoppingTests.LAMBDA_TESTS_HomePage -->
+      </class> <!-- ShoppingTests.TESTS_PurchaseWithLoggedUser -->
     </classes>
-  </test> <!-- HOME PAGE TESTS(failed) -->
+  </test> <!-- Purchase with logged user test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

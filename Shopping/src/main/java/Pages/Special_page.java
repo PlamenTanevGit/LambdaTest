@@ -1,9 +1,6 @@
 package Pages;
 
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
@@ -16,11 +13,9 @@ public class Special_page extends base {
 
 	
 	
-	
-
 
 	public Special_page() {
-		pageTitleVerify("");
+	
 
 	}
 

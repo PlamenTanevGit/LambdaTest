@@ -36,14 +36,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
-import Pages.ACCOUNT_REGISTER_page;
-import Pages.CHECKOUT_PAGE;
-import Pages.CONFIRM_ORDER_PAGE;
-import Pages.HOME_PAGE;
-import Pages.SEARCH_RESULT_PAGE;
-import Pages.SHOPPING_CART_PAGE;
-import Pages.SUCCESS_PAGE;
-import Pages.TOP_HEADER;
+import Pages.AccountRegister_page;
+import Pages.Checkout_page;
+import Pages.ConfirmOrder_page;
+import Pages.Home_page;
+import Pages.Login_page;
+import Pages.MyAccount_page;
+import Pages.SearchResults_page;
+import Pages.ShoppingCart_page;
+import Pages.Success_page;
+import Pages.TopHeader_page;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base {
@@ -56,7 +58,7 @@ public class base {
 	public static java.io.FileInputStream fis2;
 
 	public static final Browsers BROWSER2 = Browsers.CHROME;
-	public static final String BROWSER = "chromeoption";
+	public static final String BROWSER = "chrome";
 	public static String baseUrl;
 	public static WebElement element;
 	public static WebDriver driver;
@@ -72,14 +74,16 @@ public class base {
 	public WebDriverWait wait;
 
 	/** Pages */
-	protected HOME_PAGE homePage;
-	protected SEARCH_RESULT_PAGE searchResultPage;
-	protected SHOPPING_CART_PAGE shoppingCartPage;
-	protected CHECKOUT_PAGE checkoutPage;
-	protected ACCOUNT_REGISTER_page accountRegisterPage;
-	protected CONFIRM_ORDER_PAGE confirmOrderPage;
-	protected TOP_HEADER topHeader;
-	protected SUCCESS_PAGE successPage;
+	protected Home_page homePage;
+	protected SearchResults_page searchResultPage;
+	protected ShoppingCart_page shoppingCartPage;
+	protected Checkout_page checkoutPage;
+	protected AccountRegister_page accountRegisterPage;
+	protected ConfirmOrder_page confirmOrderPage;
+	protected TopHeader_page topHeader;
+	protected Success_page successPage;
+	protected Login_page loginPage;
+	protected MyAccount_page myAccountPage;
 
 	public static WebDriver initialise(String browser) {
 
@@ -154,7 +158,7 @@ public class base {
 		}
 
 	}
-
+	
 	public static void openUrl(String url) {
 		driver.get(url);
 		Reporter.log("Successfully opened url '" + url + "'");
@@ -163,6 +167,14 @@ public class base {
 	public static void assertElementIsDisplayed(WebElement element) {
 		Assert.assertTrue(element.isDisplayed());
 	}
+	  public void softAssertElementIsNotDisplayed(By locator) {
+
+	        List<WebElement> searchedElemeents = driver.findElements(locator);
+	        System.out.println(searchedElemeents.size());
+	        softAssert.assertTrue(searchedElemeents.isEmpty());
+	        softAssert.assertAll();
+	  
+	  }
 
 	/*
 	 * WebElement returns element based on different locator
@@ -228,8 +240,13 @@ public class base {
 	 * findElement using 'returnElement' and verify is Displayed
 	 */
 	public static WebElement findElement(String locatorType, String locatorPath) {
-		element = returnElement(locatorType, locatorPath);
-		element.isDisplayed();
+		try {
+			element = returnElement(locatorType, locatorPath);
+			element.isDisplayed();
+		} catch (StaleElementReferenceException e) {
+			System.out.println(e);
+		}
+		
 		return element;
 	}
 
@@ -433,34 +450,7 @@ public class base {
 		return element;
 	}
 
-	/*
-	 * FileWriter method - can write down in a .txt particular data getted from an
-	 * WebElement
-	 */
-	public static String FileWriter(WebElement ele, String filePath) throws IOException {
 
-		File f1 = new File(filePath);
-		java.io.FileWriter fw = new java.io.FileWriter(f1);
-		String text = ele.getText();
-		Reporter.log(text);
-//		System.out.println(text);
-		fw.write(text);
-		fw.close();
-		return text;
-
-	}
-
-	public static String FileWriter(String filePath, String chosenString) throws IOException {
-		File f1 = new File(filePath);
-		java.io.FileWriter fw = new java.io.FileWriter(f1);
-
-		Reporter.log("Credit card No :" + chosenString);
-		System.out.println("Credit card No : " + chosenString);
-		fw.write(chosenString);
-		fw.close();
-		return chosenString;
-
-	}
 
 	/* check all checkBoxSelection method - capturing them by common tagName */
 	public void TermsAndConditionsclickAllCheckBoxes(String tagname, String attribute, String text) {
@@ -474,20 +464,6 @@ public class base {
 				base.jSClick(webElement);
 			}
 		}
-	}
-
-	/* File Reader Method - read data from .txt */
-	public static String getStoredString(String filePath, int chars) throws IOException {
-
-		File f1 = new File(filePath);
-		FileReader fr = new FileReader(f1);
-		char[] chras = new char[chars];
-		fr.read(chras);
-		String s = new String(chras);
-		System.out.println("The stored String is  : " + s);
-		fr.close();
-		return s;
-
 	}
 
 	public static String randomString(int lenght) {
@@ -524,14 +500,16 @@ public class base {
 
 		initConfiguration();
 
-		homePage = new HOME_PAGE();
-		searchResultPage = new SEARCH_RESULT_PAGE();
-		shoppingCartPage = new SHOPPING_CART_PAGE();
-		checkoutPage = new CHECKOUT_PAGE();
-		accountRegisterPage = new ACCOUNT_REGISTER_page();
-		confirmOrderPage = new CONFIRM_ORDER_PAGE();
-		topHeader = new TOP_HEADER();
-		successPage = new  SUCCESS_PAGE();
+		homePage = new Home_page();
+		searchResultPage = new SearchResults_page();
+		shoppingCartPage = new ShoppingCart_page();
+		checkoutPage = new Checkout_page();
+		accountRegisterPage = new AccountRegister_page();
+		confirmOrderPage = new ConfirmOrder_page();
+		topHeader = new TopHeader_page();
+		successPage = new  Success_page();
+		loginPage = new Login_page();
+		myAccountPage = new MyAccount_page();
 	}
 
 	@AfterClass

@@ -1,14 +1,12 @@
 package Pages;
 
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class CONFIRM_ORDER_PAGE extends base {
+public class ConfirmOrder_page extends base {
 
 	public WebElement ConfirmOrder_title() {
 		return element = super.findElement("xpath",
@@ -133,11 +131,11 @@ public class CONFIRM_ORDER_PAGE extends base {
 				"//div[@class='buttons d-flex justify-content-between']/button");
 	}
 	
-	public void clickOnContinueButton() {
+	public void ConfirmOrder() {
 		try {
 			wait = new WebDriverWait(driver, 4);
 			super.jSClick(ConfirmOrder_button());
-			wait.until(ExpectedConditions.visibilityOf(confirmOrderPage.ConfirmOrder_title()));
+//			wait.until(ExpectedConditions.visibilityOf(successPage.OrderPlaced_SuccessMessage()));
 		} catch (StaleElementReferenceException e) {
 			System.out.println(e);
 			ConfirmOrder_button().click();			
@@ -178,20 +176,7 @@ public class CONFIRM_ORDER_PAGE extends base {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public CONFIRM_ORDER_PAGE() {
+	public ConfirmOrder_page() {
 		
 	}
 

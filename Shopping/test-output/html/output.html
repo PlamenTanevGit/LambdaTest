@@ -16,13 +16,20 @@
 
   <div id="log">
                   Suite Start : Suite<br />
-                        Test&nbsp; detected: HOME PAGE TESTS<br />
-                        Class detected: ShoppingTests.LAMBDA_TESTS_HomePage<br />
-                        Test&nbsp; detected: SHOPPING CART TESTS<br />
-                        Class detected: ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount<br />
+                        Test&nbsp; detected: Home Page Tests<br />
+                        Class detected: ShoppingTests.TESTS_HomePage<br />
+                        Test&nbsp; detected: Login Tests<br />
+                        Class detected: ShoppingTests.TESTS_Login<br />
+                        Test&nbsp; detected: Purchase with logged user test<br />
+                        Class detected: ShoppingTests.TESTS_PurchaseWithLoggedUser<br />
+                        Test&nbsp; detected: Add / Remove Items tests<br />
+                        Class detected: ShoppingTests.TESTS_ShoppingCartAddRemoveItems<br />
+                        Test&nbsp; detected: Purchase - Registered Account from country having VAT<br />
+                        Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT<br />
+                        Test&nbsp; detected: Purchase - Registered Account from country Not having VAT<br />
+                        Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT<br />
                         <br />
-                        HOME PAGE TESTS Starts<br />
-                        &lt;b&gt;Test Class org.testng.TestRunnerTest Case:- HOME PAGE TESTS has Started &lt;/b&gt;<br />
+                        Home Page Tests Starts<br />
                         chrome is Initialised<br />
                         Starting test method:t1_verifyLambdaTest_HomePageElements<br />
                         Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
@@ -44,14 +51,42 @@
                          Enter value : HTC Touch HD<br />
                         t3_search_ProductInTheSearchFieldAndVerifyResults is Passed<br />
                         Starting test method:t5<br />
-                        Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
                         t5 is Passed<br />
-                        HOME PAGE TESTS Finish<br />
-                        SHOPPING CART TESTS Starts<br />
-                        &lt;b&gt;Test Class org.testng.TestRunnerTest Case:- SHOPPING CART TESTS has Started &lt;/b&gt;<br />
+                        Home Page Tests Finish<br />
+                        Login Tests Starts<br />
                         chrome is Initialised<br />
-                        Starting test method:d1<br />
-                        d1 is Passed<br />
+                        Starting test method:t1_Login_Valid_UserCredentials<br />
+                        Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=account/login&apos;<br />
+                         Enter value : plamen.tanev31@gmail.com<br />
+                         Enter value : 1234<br />
+                        t1_Login_Valid_UserCredentials is Passed<br />
+                        Starting test method:t2_Login_Invalid_UserCredentials<br />
+                        Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=account/login&apos;<br />
+                         Enter value : plamen.tanev31@gmail.com<br />
+                         Enter value : 5555<br />
+                        t2_Login_Invalid_UserCredentials is Passed<br />
+                        Login Tests Finish<br />
+                        Purchase with logged user test Starts<br />
+                        chrome is Initialised<br />
+                        Starting test method:t1_LoginAndPurchase<br />
+                        Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=account/login&apos;<br />
+                         Enter value : HTC Touch HD<br />
+                         Enter value : testFNixw<br />
+                         Enter value : testLNsdw<br />
+                         Enter value : testEmailzbr@test.com<br />
+                         Enter value : +359123456789<br />
+                         Enter value : 1234<br />
+                         Enter value : 1234<br />
+                         Enter value : CompanyTestzkj<br />
+                         Enter value : address1_smn<br />
+                         Enter value : address2_vmb<br />
+                         Enter value : Sofia<br />
+                         Enter value : 1111<br />
+                        Text : VAT (20%): - is Verified<br />
+                        t1_LoginAndPurchase is Passed<br />
+                        Purchase with logged user test Finish<br />
+                        Add / Remove Items tests Starts<br />
+                        chrome is Initialised<br />
                         Starting test method:t1_shoppingCartVerificationAndRemoveProducts<br />
                         Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
                          Enter value : HTC Touch HD<br />
@@ -69,24 +104,46 @@
                         Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
                          Enter value : HTC Touch HD<br />
                         t2_shopingCart_AddMultipleItemsVerification is Passed<br />
-                        Starting test method:t3_CheckoutItem<br />
+                        Add / Remove Items tests Finish<br />
+                        Purchase - Registered Account from country having VAT Starts<br />
+                        chrome is Initialised<br />
+                        Starting test method:CheckoutItem_With_VAT<br />
                         Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
                          Enter value : HTC Touch HD<br />
-                         Enter value : firstName_kkq<br />
-                         Enter value : lastName_ssm<br />
-                         Enter value : email_chc@email.com<br />
-                         Enter value : +359123123123<br />
-                         Enter value : passlli<br />
-                         Enter value : passlli<br />
-                         Enter value : company_quz<br />
-                         Enter value : address1_duz<br />
-                         Enter value : address2_qlr<br />
+                         Enter value : testFNfol<br />
+                         Enter value : testLNidl<br />
+                         Enter value : testEmailrrc@test.com<br />
+                         Enter value : +359123456789<br />
+                         Enter value : 1234<br />
+                         Enter value : 1234<br />
+                         Enter value : CompanyTestsew<br />
+                         Enter value : address1_spv<br />
+                         Enter value : address2_lun<br />
                          Enter value : Sofia<br />
                          Enter value : 1111<br />
-                        t3_CheckoutItem is Passed<br />
-                        SHOPPING CART TESTS Finish<br />
+                        Text : VAT (20%): - is Verified<br />
+                        CheckoutItem_With_VAT is Passed<br />
+                        Purchase - Registered Account from country having VAT Finish<br />
+                        Purchase - Registered Account from country Not having VAT Starts<br />
+                        chrome is Initialised<br />
+                        Starting test method:t3_CheckoutItem_Without_VAT<br />
+                        Successfully opened url &apos;https://ecommerce-playground.lambdatest.io/index.php?route=common/home&apos;<br />
+                         Enter value : HTC Touch HD<br />
+                         Enter value : testFNkdn<br />
+                         Enter value : testLNbxq<br />
+                         Enter value : testEmailbny@test.com<br />
+                         Enter value : +359123456789<br />
+                         Enter value : 1234<br />
+                         Enter value : 1234<br />
+                         Enter value : CompanyTestqcy<br />
+                         Enter value : address1_hbp<br />
+                         Enter value : address2_tqa<br />
+                         Enter value : Sofia<br />
+                         Enter value : 1111<br />
+                        t3_CheckoutItem_Without_VAT is Passed<br />
+                        Purchase - Registered Account from country Not having VAT Finish<br />
                         Driver quit<br />
-                        Duration of Suite is : 35 sec.<br />
+                        Duration of Suite is : 94 sec.<br />
             </div>
 
 </body>

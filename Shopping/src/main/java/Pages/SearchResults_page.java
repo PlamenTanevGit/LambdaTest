@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PagesEcommerce.base;
 
-public class SEARCH_RESULT_PAGE extends base {
+public class SearchResults_page extends base {
 
 	public WebElement SearchPage_topLeftIcon() {
 		return element = super.findElement("xpath",
@@ -156,8 +156,8 @@ public class SEARCH_RESULT_PAGE extends base {
 		softAssert.assertAll();
 	}
 
-	public SEARCH_RESULT_PAGE() {
-		shoppingCartPage = new SHOPPING_CART_PAGE();
+	public SearchResults_page() {
+		shoppingCartPage = new ShoppingCart_page();
 	}
 
 }

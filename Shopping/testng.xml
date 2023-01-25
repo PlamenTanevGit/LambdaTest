@@ -3,24 +3,49 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
-		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<!-- 
 		<listener class-name="PagesEcommerce.ExtentReportListener" />
+		 -->
 		<listener class-name="PagesEcommerce.Listners" />
 	</listeners>
-
-  <test thread-count="5" name="HOME PAGE TESTS">
+	
+  <test thread-count="5" name="Home Page Tests">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_HomePage"/>
+      <class name="ShoppingTests.TESTS_HomePage"/>
     </classes>
   </test>  
   
-  
-  
-   <test thread-count="5" name="SHOPPING CART TESTS">
+  <test thread-count="5" name="Login Tests">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount"/>
+      <class name="ShoppingTests.TESTS_Login"/>
     </classes>
   </test>
+  
+   <test thread-count="5" name="Purchase with logged user test">
+    <classes>
+      <class name="ShoppingTests.TESTS_PurchaseWithLoggedUser"/>
+    </classes>
+  </test>
+  
+    <test thread-count="5" name="Add / Remove Items tests">
+    <classes>
+      <class name="ShoppingTests.TESTS_ShoppingCartAddRemoveItems"/>
+    </classes>
+  </test>
+  
+    <test thread-count="5" name="Purchase - Registered Account from country having VAT">
+    <classes>
+      <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT"/>
+    </classes>
+  </test>
+  
+    <test thread-count="5" name="Purchase - Registered Account from country Not having VAT">
+    <classes>
+      <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT"/>
+    </classes>
+  </test>
+  
+ 
   <!--  -->
  
   

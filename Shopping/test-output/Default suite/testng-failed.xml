@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount">
+      <class name="ShoppingTests.TESTS_PurchaseWithLoggedUser">
         <methods>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
-          <include name="t3_CheckoutItem"/>
+          <include name="t1_LoginAndPurchase"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount -->
+      </class> <!-- ShoppingTests.TESTS_PurchaseWithLoggedUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

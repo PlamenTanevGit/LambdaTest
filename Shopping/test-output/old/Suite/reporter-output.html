@@ -1,11 +1,18 @@
 <h2>Reporter output</h2><table><tr><td>Suite Start : Suite</td></tr>
-<tr><td>Test  detected: HOME PAGE TESTS</td></tr>
-<tr><td>Class detected: ShoppingTests.LAMBDA_TESTS_HomePage</td></tr>
-<tr><td>Test  detected: SHOPPING CART TESTS</td></tr>
-<tr><td>Class detected: ShoppingTests.LAMBDA_TESTS_ShoppingCartRegisterAccount</td></tr>
+<tr><td>Test  detected: Home Page Tests</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_HomePage</td></tr>
+<tr><td>Test  detected: Login Tests</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_Login</td></tr>
+<tr><td>Test  detected: Purchase with logged user test</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_PurchaseWithLoggedUser</td></tr>
+<tr><td>Test  detected: Add / Remove Items tests</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_ShoppingCartAddRemoveItems</td></tr>
+<tr><td>Test  detected: Purchase - Registered Account from country having VAT</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT</td></tr>
+<tr><td>Test  detected: Purchase - Registered Account from country Not having VAT</td></tr>
+<tr><td>Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT</td></tr>
 <tr><td></td></tr>
-<tr><td>HOME PAGE TESTS Starts</td></tr>
-<tr><td><b>Test Class org.testng.TestRunnerTest Case:- HOME PAGE TESTS has Started </b></td></tr>
+<tr><td>Home Page Tests Starts</td></tr>
 <tr><td>chrome is Initialised</td></tr>
 <tr><td>Starting test method:t1_verifyLambdaTest_HomePageElements</td></tr>
 <tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
@@ -27,14 +34,42 @@
 <tr><td> Enter value : HTC Touch HD</td></tr>
 <tr><td>t3_search_ProductInTheSearchFieldAndVerifyResults is Passed</td></tr>
 <tr><td>Starting test method:t5</td></tr>
-<tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
 <tr><td>t5 is Passed</td></tr>
-<tr><td>HOME PAGE TESTS Finish</td></tr>
-<tr><td>SHOPPING CART TESTS Starts</td></tr>
-<tr><td><b>Test Class org.testng.TestRunnerTest Case:- SHOPPING CART TESTS has Started </b></td></tr>
+<tr><td>Home Page Tests Finish</td></tr>
+<tr><td>Login Tests Starts</td></tr>
 <tr><td>chrome is Initialised</td></tr>
-<tr><td>Starting test method:d1</td></tr>
-<tr><td>d1 is Passed</td></tr>
+<tr><td>Starting test method:t1_Login_Valid_UserCredentials</td></tr>
+<tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'</td></tr>
+<tr><td> Enter value : plamen.tanev31@gmail.com</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td>t1_Login_Valid_UserCredentials is Passed</td></tr>
+<tr><td>Starting test method:t2_Login_Invalid_UserCredentials</td></tr>
+<tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'</td></tr>
+<tr><td> Enter value : plamen.tanev31@gmail.com</td></tr>
+<tr><td> Enter value : 5555</td></tr>
+<tr><td>t2_Login_Invalid_UserCredentials is Passed</td></tr>
+<tr><td>Login Tests Finish</td></tr>
+<tr><td>Purchase with logged user test Starts</td></tr>
+<tr><td>chrome is Initialised</td></tr>
+<tr><td>Starting test method:t1_LoginAndPurchase</td></tr>
+<tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'</td></tr>
+<tr><td> Enter value : HTC Touch HD</td></tr>
+<tr><td> Enter value : testFNixw</td></tr>
+<tr><td> Enter value : testLNsdw</td></tr>
+<tr><td> Enter value : testEmailzbr@test.com</td></tr>
+<tr><td> Enter value : +359123456789</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : CompanyTestzkj</td></tr>
+<tr><td> Enter value : address1_smn</td></tr>
+<tr><td> Enter value : address2_vmb</td></tr>
+<tr><td> Enter value : Sofia</td></tr>
+<tr><td> Enter value : 1111</td></tr>
+<tr><td>Text : VAT (20%): - is Verified</td></tr>
+<tr><td>t1_LoginAndPurchase is Passed</td></tr>
+<tr><td>Purchase with logged user test Finish</td></tr>
+<tr><td>Add / Remove Items tests Starts</td></tr>
+<tr><td>chrome is Initialised</td></tr>
 <tr><td>Starting test method:t1_shoppingCartVerificationAndRemoveProducts</td></tr>
 <tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
 <tr><td> Enter value : HTC Touch HD</td></tr>
@@ -52,22 +87,44 @@
 <tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
 <tr><td> Enter value : HTC Touch HD</td></tr>
 <tr><td>t2_shopingCart_AddMultipleItemsVerification is Passed</td></tr>
-<tr><td>Starting test method:t3_CheckoutItem</td></tr>
+<tr><td>Add / Remove Items tests Finish</td></tr>
+<tr><td>Purchase - Registered Account from country having VAT Starts</td></tr>
+<tr><td>chrome is Initialised</td></tr>
+<tr><td>Starting test method:CheckoutItem_With_VAT</td></tr>
 <tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
 <tr><td> Enter value : HTC Touch HD</td></tr>
-<tr><td> Enter value : firstName_kkq</td></tr>
-<tr><td> Enter value : lastName_ssm</td></tr>
-<tr><td> Enter value : email_chc@email.com</td></tr>
-<tr><td> Enter value : +359123123123</td></tr>
-<tr><td> Enter value : passlli</td></tr>
-<tr><td> Enter value : passlli</td></tr>
-<tr><td> Enter value : company_quz</td></tr>
-<tr><td> Enter value : address1_duz</td></tr>
-<tr><td> Enter value : address2_qlr</td></tr>
+<tr><td> Enter value : testFNfol</td></tr>
+<tr><td> Enter value : testLNidl</td></tr>
+<tr><td> Enter value : testEmailrrc@test.com</td></tr>
+<tr><td> Enter value : +359123456789</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : CompanyTestsew</td></tr>
+<tr><td> Enter value : address1_spv</td></tr>
+<tr><td> Enter value : address2_lun</td></tr>
 <tr><td> Enter value : Sofia</td></tr>
 <tr><td> Enter value : 1111</td></tr>
-<tr><td>t3_CheckoutItem is Passed</td></tr>
-<tr><td>SHOPPING CART TESTS Finish</td></tr>
+<tr><td>Text : VAT (20%): - is Verified</td></tr>
+<tr><td>CheckoutItem_With_VAT is Passed</td></tr>
+<tr><td>Purchase - Registered Account from country having VAT Finish</td></tr>
+<tr><td>Purchase - Registered Account from country Not having VAT Starts</td></tr>
+<tr><td>chrome is Initialised</td></tr>
+<tr><td>Starting test method:t3_CheckoutItem_Without_VAT</td></tr>
+<tr><td>Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home'</td></tr>
+<tr><td> Enter value : HTC Touch HD</td></tr>
+<tr><td> Enter value : testFNkdn</td></tr>
+<tr><td> Enter value : testLNbxq</td></tr>
+<tr><td> Enter value : testEmailbny@test.com</td></tr>
+<tr><td> Enter value : +359123456789</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : 1234</td></tr>
+<tr><td> Enter value : CompanyTestqcy</td></tr>
+<tr><td> Enter value : address1_hbp</td></tr>
+<tr><td> Enter value : address2_tqa</td></tr>
+<tr><td> Enter value : Sofia</td></tr>
+<tr><td> Enter value : 1111</td></tr>
+<tr><td>t3_CheckoutItem_Without_VAT is Passed</td></tr>
+<tr><td>Purchase - Registered Account from country Not having VAT Finish</td></tr>
 <tr><td>Driver quit</td></tr>
-<tr><td>Duration of Suite is : 35 sec.</td></tr>
+<tr><td>Duration of Suite is : 94 sec.</td></tr>
 </table>

@@ -4,21 +4,19 @@
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<!-- 
 		<listener class-name="PagesEcommerce.ExtentReportListener" />
+		 --> 
 		<listener class-name="PagesEcommerce.Listners" />
 	</listeners>
 
-  <test thread-count="5" name="HOME PAGE TESTS">
+   <test thread-count="5" name="SHOPPING CART TESTS">
     <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_HomePage"/>
+      <class name="ShoppingTests.TESTS_ShoppingCartRegisterAccount"/>
     </classes>
-  </test> <!-- Test -->
-  
-  <test thread-count="5" name="SHOPPING CART TESTS">
-    <classes>
-      <class name="ShoppingTests.LAMBDA_TESTS_ShoppingCart"/>
-    </classes>
-  </test> <!-- Test -->
+  </test>
+  <!--  -->
+ 
   
   
 </suite> <!-- Suite -->

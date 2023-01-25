@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="15" passed="13" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Suite Start : Suite]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Home Page Tests]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_HomePage]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Login Tests]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_Login]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Purchase with logged user test]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_PurchaseWithLoggedUser]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Add / Remove Items tests]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_ShoppingCartAddRemoveItems]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Purchase - Registered Account from country having VAT]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT]]>
+    </line>
+    <line>
+      <![CDATA[Test  detected: Purchase - Registered Account from country Not having VAT]]>
+    </line>
+    <line>
+      <![CDATA[Class detected: ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT]]>
+    </line>
     <line>
       <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[chromeoption is Initialised]]>
+      <![CDATA[Home Page Tests Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t1_verifyLambdaTest_HomePageElements]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[t1_verifyLambdaTest_HomePageElements is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t2_SearchField_verifyAutoSuggestResults]]>
     </line>
     <line>
       <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
@@ -14,16 +68,118 @@
       <![CDATA[ Enter value : HTC Touch HD]]>
     </line>
     <line>
-      <![CDATA[ Enter value : firstName_czu]]>
+      <![CDATA[t2_SearchField_verifyAutoSuggestResults is Passed]]>
     </line>
     <line>
-      <![CDATA[ Enter value : lastName_sbo]]>
+      <![CDATA[Starting test method:t2_SearchField_verifyAutoSuggestResults]]>
     </line>
     <line>
-      <![CDATA[ Enter value : email_cgo@email.com]]>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
     </line>
     <line>
-      <![CDATA[ Enter value : +359123123123]]>
+      <![CDATA[ Enter value : Palm Treo Pro]]>
+    </line>
+    <line>
+      <![CDATA[t2_SearchField_verifyAutoSuggestResults is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t3_search_ProductInTheSearchFieldAndVerifyResults]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : Palm Treo Pro]]>
+    </line>
+    <line>
+      <![CDATA[t3_search_ProductInTheSearchFieldAndVerifyResults is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t3_search_ProductInTheSearchFieldAndVerifyResults]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[t3_search_ProductInTheSearchFieldAndVerifyResults is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t5]]>
+    </line>
+    <line>
+      <![CDATA[t5 is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Home Page Tests Finish]]>
+    </line>
+    <line>
+      <![CDATA[Login Tests Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t1_Login_Valid_UserCredentials]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : plamen.tanev31@gmail.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1234]]>
+    </line>
+    <line>
+      <![CDATA[t1_Login_Valid_UserCredentials is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t2_Login_Invalid_UserCredentials]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : plamen.tanev31@gmail.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 5555]]>
+    </line>
+    <line>
+      <![CDATA[t2_Login_Invalid_UserCredentials is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Login Tests Finish]]>
+    </line>
+    <line>
+      <![CDATA[Purchase with logged user test Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t1_LoginAndPurchase]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testFNixw]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testLNsdw]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testEmailzbr@test.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : +359123456789]]>
     </line>
     <line>
       <![CDATA[ Enter value : 1234]]>
@@ -32,13 +188,13 @@
       <![CDATA[ Enter value : 1234]]>
     </line>
     <line>
-      <![CDATA[ Enter value : company_knw]]>
+      <![CDATA[ Enter value : CompanyTestzkj]]>
     </line>
     <line>
-      <![CDATA[ Enter value : address1_opa]]>
+      <![CDATA[ Enter value : address1_smn]]>
     </line>
     <line>
-      <![CDATA[ Enter value : address2_myn]]>
+      <![CDATA[ Enter value : address2_vmb]]>
     </line>
     <line>
       <![CDATA[ Enter value : Sofia]]>
@@ -47,33 +203,234 @@
       <![CDATA[ Enter value : 1111]]>
     </line>
     <line>
+      <![CDATA[Text : VAT (20%): - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[t1_LoginAndPurchase is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Purchase with logged user test Finish]]>
+    </line>
+    <line>
+      <![CDATA[Add / Remove Items tests Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t1_shoppingCartVerificationAndRemoveProducts]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[Text : Checkout - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : View Cart - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Page title  is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : IMAGE - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : PRODUCT NAME - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : MODEL - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : QUANTITY - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : UNIT PRICE - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[Text : TOTAL - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[t1_shoppingCartVerificationAndRemoveProducts is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t2_shopingCart_AddMultipleItemsVerification]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[t2_shopingCart_AddMultipleItemsVerification is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Add / Remove Items tests Finish]]>
+    </line>
+    <line>
+      <![CDATA[Purchase - Registered Account from country having VAT Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:CheckoutItem_With_VAT]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testFNfol]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testLNidl]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testEmailrrc@test.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : +359123456789]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1234]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1234]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : CompanyTestsew]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address1_spv]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address2_lun]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : Sofia]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1111]]>
+    </line>
+    <line>
+      <![CDATA[Text : VAT (20%): - is Verified]]>
+    </line>
+    <line>
+      <![CDATA[CheckoutItem_With_VAT is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Purchase - Registered Account from country having VAT Finish]]>
+    </line>
+    <line>
+      <![CDATA[Purchase - Registered Account from country Not having VAT Starts]]>
+    </line>
+    <line>
+      <![CDATA[chrome is Initialised]]>
+    </line>
+    <line>
+      <![CDATA[Starting test method:t3_CheckoutItem_Without_VAT]]>
+    </line>
+    <line>
+      <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : HTC Touch HD]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testFNkdn]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testLNbxq]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : testEmailbny@test.com]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : +359123456789]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1234]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1234]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : CompanyTestqcy]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address1_hbp]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : address2_tqa]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : Sofia]]>
+    </line>
+    <line>
+      <![CDATA[ Enter value : 1111]]>
+    </line>
+    <line>
+      <![CDATA[t3_CheckoutItem_Without_VAT is Passed]]>
+    </line>
+    <line>
+      <![CDATA[Purchase - Registered Account from country Not having VAT Finish]]>
+    </line>
+    <line>
       <![CDATA[Driver quit]]>
     </line>
     <line>
-      <![CDATA[Duration of Suite is : 12 sec.]]>
+      <![CDATA[Duration of Suite is : 94 sec.]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-01-24T17:35:42 EET" name="Default suite" finished-at="2023-01-24T17:35:54 EET" duration-ms="12187">
+  <suite started-at="2023-01-25T14:16:47 EET" name="Suite" finished-at="2023-01-25T14:18:22 EET" duration-ms="94158">
     <groups>
     </groups>
-    <test started-at="2023-01-24T17:35:42 EET" name="Default test" finished-at="2023-01-24T17:35:54 EET" duration-ms="12187">
-      <class name="ShoppingTests.TESTS_ShoppingCartRegisterAccount">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartRegisterAccount@67d48005]" started-at="2023-01-24T17:35:42 EET" name="beforeSuite" finished-at="2023-01-24T17:35:42 EET" duration-ms="7" status="PASS">
+    <test started-at="2023-01-25T14:16:47 EET" name="Home Page Tests" finished-at="2023-01-25T14:17:00 EET" duration-ms="12793">
+      <class name="ShoppingTests.TESTS_HomePage">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:47 EET" name="beforeClass" finished-at="2023-01-25T14:16:49 EET" duration-ms="1287" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartRegisterAccount@67d48005]" started-at="2023-01-24T17:35:42 EET" name="beforeClass" finished-at="2023-01-24T17:35:43 EET" duration-ms="1014" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[chromeoption is Initialised]]>
+              <![CDATA[chrome is Initialised]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="t3_CheckoutItemWithVAT()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartRegisterAccount@67d48005]" started-at="2023-01-24T17:35:43 EET" name="t3_CheckoutItemWithVAT" description="This test performs search product and verifies the found product" finished-at="2023-01-24T17:35:54 EET" duration-ms="11127" status="PASS">
+        <test-method signature="t1_verifyLambdaTest_HomePageElements()[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:49 EET" name="t1_verifyLambdaTest_HomePageElements" description="The Test verifies the main components on the Home Page" finished-at="2023-01-25T14:16:52 EET" duration-ms="3311" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t1_verifyLambdaTest_HomePageElements]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[t1_verifyLambdaTest_HomePageElements is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t1_verifyLambdaTest_HomePageElements -->
+        <test-method signature="t2_SearchField_verifyAutoSuggestResults(java.lang.String,int)[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:52 EET" name="t2_SearchField_verifyAutoSuggestResults" description="This Test will enter a product in the search field and confirm auto suggested results, test is executed with 2 sets of data" data-provider="productInputs" finished-at="2023-01-25T14:16:54 EET" duration-ms="1446" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HTC Touch HD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t2_SearchField_verifyAutoSuggestResults]]>
+            </line>
             <line>
               <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
             </line>
@@ -81,16 +438,204 @@
               <![CDATA[ Enter value : HTC Touch HD]]>
             </line>
             <line>
-              <![CDATA[ Enter value : firstName_czu]]>
+              <![CDATA[t2_SearchField_verifyAutoSuggestResults is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t2_SearchField_verifyAutoSuggestResults -->
+        <test-method signature="t2_SearchField_verifyAutoSuggestResults(java.lang.String,int)[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:54 EET" name="t2_SearchField_verifyAutoSuggestResults" description="This Test will enter a product in the search field and confirm auto suggested results, test is executed with 2 sets of data" data-provider="productInputs" finished-at="2023-01-25T14:16:55 EET" duration-ms="1399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Palm Treo Pro]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t2_SearchField_verifyAutoSuggestResults]]>
             </line>
             <line>
-              <![CDATA[ Enter value : lastName_sbo]]>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
             </line>
             <line>
-              <![CDATA[ Enter value : email_cgo@email.com]]>
+              <![CDATA[ Enter value : Palm Treo Pro]]>
             </line>
             <line>
-              <![CDATA[ Enter value : +359123123123]]>
+              <![CDATA[t2_SearchField_verifyAutoSuggestResults is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t2_SearchField_verifyAutoSuggestResults -->
+        <test-method signature="t3_search_ProductInTheSearchFieldAndVerifyResults(java.lang.String,java.lang.String,int)[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:55 EET" name="t3_search_ProductInTheSearchFieldAndVerifyResults" description="This test performs search product and verifies the found product" data-provider="productInputs" finished-at="2023-01-25T14:16:58 EET" duration-ms="2609" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Palm Treo Pro]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$337.99]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t3_search_ProductInTheSearchFieldAndVerifyResults]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : Palm Treo Pro]]>
+            </line>
+            <line>
+              <![CDATA[t3_search_ProductInTheSearchFieldAndVerifyResults is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t3_search_ProductInTheSearchFieldAndVerifyResults -->
+        <test-method signature="t3_search_ProductInTheSearchFieldAndVerifyResults(java.lang.String,java.lang.String,int)[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:16:58 EET" name="t3_search_ProductInTheSearchFieldAndVerifyResults" description="This test performs search product and verifies the found product" data-provider="productInputs" finished-at="2023-01-25T14:17:00 EET" duration-ms="2452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HTC Touch HD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$146.00]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t3_search_ProductInTheSearchFieldAndVerifyResults]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[t3_search_ProductInTheSearchFieldAndVerifyResults is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t3_search_ProductInTheSearchFieldAndVerifyResults -->
+        <test-method signature="t5()[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:17:00 EET" name="t5" finished-at="2023-01-25T14:17:00 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t5]]>
+            </line>
+            <line>
+              <![CDATA[t5 is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t5 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_HomePage@1ff4931d]" started-at="2023-01-25T14:17:00 EET" name="afterClass" finished-at="2023-01-25T14:17:00 EET" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ShoppingTests.TESTS_HomePage -->
+    </test> <!-- Home Page Tests -->
+    <test started-at="2023-01-25T14:17:00 EET" name="Login Tests" finished-at="2023-01-25T14:17:06 EET" duration-ms="6045">
+      <class name="ShoppingTests.TESTS_Login">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_Login@385e9564]" started-at="2023-01-25T14:17:00 EET" name="beforeClass" finished-at="2023-01-25T14:17:01 EET" duration-ms="849" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chrome is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="t1_Login_Valid_UserCredentials()[pri:0, instance:ShoppingTests.TESTS_Login@385e9564]" started-at="2023-01-25T14:17:01 EET" name="t1_Login_Valid_UserCredentials" description="This Test performs Login with valid Credentials" finished-at="2023-01-25T14:17:05 EET" duration-ms="4027" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t1_Login_Valid_UserCredentials]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : plamen.tanev31@gmail.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1234]]>
+            </line>
+            <line>
+              <![CDATA[t1_Login_Valid_UserCredentials is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t1_Login_Valid_UserCredentials -->
+        <test-method signature="t2_Login_Invalid_UserCredentials()[pri:0, instance:ShoppingTests.TESTS_Login@385e9564]" started-at="2023-01-25T14:17:05 EET" name="t2_Login_Invalid_UserCredentials" description="This Test performs Login with Invalid Credentials and Asserts warning message is displayed " finished-at="2023-01-25T14:17:06 EET" duration-ms="927" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t2_Login_Invalid_UserCredentials]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : plamen.tanev31@gmail.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 5555]]>
+            </line>
+            <line>
+              <![CDATA[t2_Login_Invalid_UserCredentials is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t2_Login_Invalid_UserCredentials -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_Login@385e9564]" started-at="2023-01-25T14:17:06 EET" name="afterClass" finished-at="2023-01-25T14:17:06 EET" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ShoppingTests.TESTS_Login -->
+    </test> <!-- Login Tests -->
+    <test started-at="2023-01-25T14:17:06 EET" name="Purchase with logged user test" finished-at="2023-01-25T14:17:26 EET" duration-ms="19284">
+      <class name="ShoppingTests.TESTS_PurchaseWithLoggedUser">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseWithLoggedUser@1e178745]" started-at="2023-01-25T14:17:06 EET" name="beforeClass" finished-at="2023-01-25T14:17:07 EET" duration-ms="830" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chrome is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="t1_LoginAndPurchase()[pri:0, instance:ShoppingTests.TESTS_PurchaseWithLoggedUser@1e178745]" started-at="2023-01-25T14:17:07 EET" name="t1_LoginAndPurchase" description="This Test performs Login with valid Credentials and then select item for purhcase and checkout" finished-at="2023-01-25T14:17:25 EET" duration-ms="18225" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t1_LoginAndPurchase]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=account/login']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testFNixw]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testLNsdw]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testEmailzbr@test.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : +359123456789]]>
             </line>
             <line>
               <![CDATA[ Enter value : 1234]]>
@@ -99,13 +644,13 @@
               <![CDATA[ Enter value : 1234]]>
             </line>
             <line>
-              <![CDATA[ Enter value : company_knw]]>
+              <![CDATA[ Enter value : CompanyTestzkj]]>
             </line>
             <line>
-              <![CDATA[ Enter value : address1_opa]]>
+              <![CDATA[ Enter value : address1_smn]]>
             </line>
             <line>
-              <![CDATA[ Enter value : address2_myn]]>
+              <![CDATA[ Enter value : address2_vmb]]>
             </line>
             <line>
               <![CDATA[ Enter value : Sofia]]>
@@ -113,23 +658,268 @@
             <line>
               <![CDATA[ Enter value : 1111]]>
             </line>
+            <line>
+              <![CDATA[Text : VAT (20%): - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[t1_LoginAndPurchase is Passed]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- t3_CheckoutItemWithVAT -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartRegisterAccount@67d48005]" started-at="2023-01-24T17:35:54 EET" name="afterClass" finished-at="2023-01-24T17:35:54 EET" duration-ms="26" status="PASS">
+        </test-method> <!-- t1_LoginAndPurchase -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseWithLoggedUser@1e178745]" started-at="2023-01-25T14:17:25 EET" name="afterClass" finished-at="2023-01-25T14:17:26 EET" duration-ms="226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartRegisterAccount@67d48005]" started-at="2023-01-24T17:35:55 EET" name="afterSuite" finished-at="2023-01-24T17:35:55 EET" duration-ms="1" status="PASS">
+      </class> <!-- ShoppingTests.TESTS_PurchaseWithLoggedUser -->
+    </test> <!-- Purchase with logged user test -->
+    <test started-at="2023-01-25T14:17:26 EET" name="Add / Remove Items tests" finished-at="2023-01-25T14:17:37 EET" duration-ms="11112">
+      <class name="ShoppingTests.TESTS_ShoppingCartAddRemoveItems">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartAddRemoveItems@49e5f737]" started-at="2023-01-25T14:17:26 EET" name="beforeClass" finished-at="2023-01-25T14:17:26 EET" duration-ms="847" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chrome is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="t1_shoppingCartVerificationAndRemoveProducts(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ShoppingTests.TESTS_ShoppingCartAddRemoveItems@49e5f737]" started-at="2023-01-25T14:17:26 EET" name="t1_shoppingCartVerificationAndRemoveProducts" description="This test performs search product and verifies the found product" data-provider="productInputs" finished-at="2023-01-25T14:17:32 EET" duration-ms="5681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HTC Touch HD]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Product 1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[$146.00]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[$146.00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t1_shoppingCartVerificationAndRemoveProducts]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[Text : Checkout - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : View Cart - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Page title  is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : IMAGE - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : PRODUCT NAME - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : MODEL - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : QUANTITY - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : UNIT PRICE - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[Text : TOTAL - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[t1_shoppingCartVerificationAndRemoveProducts is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t1_shoppingCartVerificationAndRemoveProducts -->
+        <test-method signature="t2_shopingCart_AddMultipleItemsVerification()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartAddRemoveItems@49e5f737]" started-at="2023-01-25T14:17:32 EET" name="t2_shopingCart_AddMultipleItemsVerification" description="This test performs search product and verifies the found product" finished-at="2023-01-25T14:17:37 EET" duration-ms="4343" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t2_shopingCart_AddMultipleItemsVerification]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[t2_shopingCart_AddMultipleItemsVerification is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t2_shopingCart_AddMultipleItemsVerification -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_ShoppingCartAddRemoveItems@49e5f737]" started-at="2023-01-25T14:17:37 EET" name="afterClass" finished-at="2023-01-25T14:17:37 EET" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ShoppingTests.TESTS_ShoppingCartAddRemoveItems -->
+    </test> <!-- Add / Remove Items tests -->
+    <test started-at="2023-01-25T14:17:37 EET" name="Purchase - Registered Account from country having VAT" finished-at="2023-01-25T14:17:54 EET" duration-ms="17159">
+      <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT@37271612]" started-at="2023-01-25T14:17:37 EET" name="beforeClass" finished-at="2023-01-25T14:17:38 EET" duration-ms="842" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chrome is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="CheckoutItem_With_VAT()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT@37271612]" started-at="2023-01-25T14:17:38 EET" name="CheckoutItem_With_VAT" description="This test search for product then do a checkout by selection of country with VAT" finished-at="2023-01-25T14:17:54 EET" duration-ms="16068" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:CheckoutItem_With_VAT]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testFNfol]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testLNidl]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testEmailrrc@test.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : +359123456789]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1234]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1234]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : CompanyTestsew]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address1_spv]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address2_lun]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : Sofia]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1111]]>
+            </line>
+            <line>
+              <![CDATA[Text : VAT (20%): - is Verified]]>
+            </line>
+            <line>
+              <![CDATA[CheckoutItem_With_VAT is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckoutItem_With_VAT -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT@37271612]" started-at="2023-01-25T14:17:54 EET" name="afterClass" finished-at="2023-01-25T14:17:54 EET" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ShoppingTests.TESTS_PurchaseRegisteredAccount_VAT -->
+    </test> <!-- Purchase - Registered Account from country having VAT -->
+    <test started-at="2023-01-25T14:17:54 EET" name="Purchase - Registered Account from country Not having VAT" finished-at="2023-01-25T14:18:22 EET" duration-ms="27720">
+      <class name="ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT@77f80c04]" started-at="2023-01-25T14:16:47 EET" name="beforeSuite" finished-at="2023-01-25T14:16:47 EET" duration-ms="7" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT@77f80c04]" started-at="2023-01-25T14:17:54 EET" name="beforeClass" finished-at="2023-01-25T14:17:55 EET" duration-ms="819" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[chrome is Initialised]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="t3_CheckoutItem_Without_VAT()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT@77f80c04]" started-at="2023-01-25T14:17:55 EET" name="t3_CheckoutItem_Without_VAT" description="This test search for product then do a checkout by selection of country without VAT" finished-at="2023-01-25T14:18:21 EET" duration-ms="26631" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test method:t3_CheckoutItem_Without_VAT]]>
+            </line>
+            <line>
+              <![CDATA[Successfully opened url 'https://ecommerce-playground.lambdatest.io/index.php?route=common/home']]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : HTC Touch HD]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testFNkdn]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testLNbxq]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : testEmailbny@test.com]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : +359123456789]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1234]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1234]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : CompanyTestqcy]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address1_hbp]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : address2_tqa]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : Sofia]]>
+            </line>
+            <line>
+              <![CDATA[ Enter value : 1111]]>
+            </line>
+            <line>
+              <![CDATA[t3_CheckoutItem_Without_VAT is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- t3_CheckoutItem_Without_VAT -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT@77f80c04]" started-at="2023-01-25T14:18:21 EET" name="afterClass" finished-at="2023-01-25T14:18:22 EET" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT@77f80c04]" started-at="2023-01-25T14:18:22 EET" name="afterSuite" finished-at="2023-01-25T14:18:22 EET" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver quit]]>
             </line>
             <line>
-              <![CDATA[Duration of Suite is : 12 sec.]]>
+              <![CDATA[Duration of Suite is : 94 sec.]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- ShoppingTests.TESTS_ShoppingCartRegisterAccount -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- ShoppingTests.TESTS_PurchaseRegisteredAccount_NO_VAT -->
+    </test> <!-- Purchase - Registered Account from country Not having VAT -->
+  </suite> <!-- Suite -->
 </testng-results>

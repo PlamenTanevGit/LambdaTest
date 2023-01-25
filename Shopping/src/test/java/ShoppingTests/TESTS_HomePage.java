@@ -4,11 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import Pages.HOME_PAGE;
-import Pages.SEARCH_RESULT_PAGE;
 import PagesEcommerce.DP;
 import PagesEcommerce.base;
 
@@ -19,7 +16,7 @@ public class TESTS_HomePage extends base {
 
 
 	@Test(alwaysRun = true, description = "The Test verifies the main components on the Home Page")
-	public void t1_verifyLambdaTest_HomePageElements() throws InterruptedException {
+	public void t1_verify_HomePageElements() throws InterruptedException {
 		// navigate to home page
 		baseUrl = config.getProperty("homePage");
 		base.openUrl(baseUrl);
@@ -110,15 +107,8 @@ public class TESTS_HomePage extends base {
 
 	}
 	
-	@Test (enabled = true)	
-	public void t5 () {
-		// navigate to home page
-//				baseUrl = config.getProperty("homePage");
-//				base.openUrl(baseUrl);
-//				topHeader.headerElmentsVerify();
-//				topHeader.verifyMyAccountLoggedUserDropdown();
-//				topHeader.logOut();
-		
+	@Test (enabled = false)	
+	public void t5 () {		
 			System.out.println(System.getProperty("user.dir"));
 	}
 
