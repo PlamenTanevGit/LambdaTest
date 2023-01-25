@@ -3,7 +3,6 @@ package PagesEcommerce;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -63,8 +62,8 @@ public class base {
 	public static WebElement element;
 	public static WebDriver driver;
 	public static final int TIMEOUT = 10;
-	public static final int PAGE_TIMEOUT = 45;
-	public static final int SCRIPT_TIMEOUT = 45;
+	public static final int PAGE_TIMEOUT = 35;
+	public static final int SCRIPT_TIMEOUT = 35;
 	public static String screenshotName;
 	public static Actions actions;
 	public static JavascriptExecutor js;
@@ -469,7 +468,7 @@ public class base {
 	public static String randomString(int lenght) {
 		String characters = "abcdefghijklmnopqrstuvwxyz";
 		String randomString = "";
-//		int lenght = 8;
+
 		Random rand = new Random();
 		char[] text = new char[lenght];
 

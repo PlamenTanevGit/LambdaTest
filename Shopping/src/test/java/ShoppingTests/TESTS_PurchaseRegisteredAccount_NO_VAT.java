@@ -3,7 +3,6 @@ package ShoppingTests;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import PagesEcommerce.DP;
 import PagesEcommerce.base;
 
 public class TESTS_PurchaseRegisteredAccount_NO_VAT extends base {

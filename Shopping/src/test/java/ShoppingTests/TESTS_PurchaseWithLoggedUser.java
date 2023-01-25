@@ -1,6 +1,5 @@
 package ShoppingTests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import PagesEcommerce.base;
