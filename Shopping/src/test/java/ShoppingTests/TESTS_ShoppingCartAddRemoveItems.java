@@ -20,8 +20,7 @@ public class TESTS_ShoppingCartAddRemoveItems extends base {
 		base.openUrl(baseUrl);
 
 		// Enter product in the Search field and click on Search button
-		homePage.enterProductInSearchField(productName);
-		homePage.clickOnSearch();
+		homePage.searchForProducts(productName);
 
 		// Hover on the desired Product (by number) and click on Add to cart
 		searchResultPage.addToCart("1");

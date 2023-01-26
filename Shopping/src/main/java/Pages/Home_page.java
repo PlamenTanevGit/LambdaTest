@@ -109,6 +109,11 @@ public class Home_page extends base {
 		}
 	}
 	
+	public void searchForProducts (String product) {
+		enterProductInSearchField ( product);
+		clickOnSearch();
+		
+	}
 	
 	public void homePageComponentsVerify() {
 		base.assertElementIsDisplayed(Search_Field());
