@@ -15,7 +15,7 @@ public class TESTS_HomePage extends base {
 //	int searchedProductSize = 5;
 
 
-	@Test(alwaysRun = true, description = "The Test verifies the main components on the Home Page")
+	@Test(enabled = true, description = "The Test verifies the main components on the Home Page")
 	public void t1_verify_HomePageElements() throws InterruptedException {
 		// navigate to home page
 		baseUrl = config.getProperty("homePage");
@@ -44,7 +44,7 @@ public class TESTS_HomePage extends base {
 
 	}
 
-	@Test(alwaysRun = true, dataProviderClass = DP.class, dataProvider = "productInputs", description = "This Test will enter a product in the search field and confirm auto suggested results, test is executed with 2 sets of data")
+	@Test(enabled = true, dataProviderClass = DP.class, dataProvider = "productInputs", description = "This Test will enter a product in the search field and confirm auto suggested results, test is executed with 2 sets of data")
 	public void t2_SearchField_verifyAutoSuggestResults(String product, int numberOfResults)
 			throws InterruptedException {
 		// navigate to home page
@@ -71,7 +71,7 @@ public class TESTS_HomePage extends base {
 
 	}
 
-	@Test(alwaysRun = true,
+	@Test(enabled = true,
 			dataProviderClass = DP.class, dataProvider = "productInputs",
 			description = "This test performs search product and verifies the found product")
 	public void t3_search_ProductInTheSearchFieldAndVerifyResults(String productName, String price, int size) throws InterruptedException {
